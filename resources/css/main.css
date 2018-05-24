@@ -1,13 +1,15 @@
 
 /* Change background colour */
 body {
-    background-color: #808080;
+    background-color: #ffffff;
 }
 .page-content {
 	background-color: #ffffff;
 }
 
-
+body > #vue-app, body > #vue-error{
+  background-color: #ffffff;
+}
 /*Payment Informations in Footer*/
 .pay160614 {
   list-style-type: none;
