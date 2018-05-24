@@ -165,3 +165,151 @@ body > #vue-app, body > #vue-error{
     text-align: center
   }
 }
+footer {
+  background: #262626
+}
+
+footer .container {
+  box-shadow: none;
+  background: 0
+}
+.footernl input {
+  float: left;
+  width: 70%;
+  border-radius: 4px 0 0 4px
+}
+
+.footernl input:focus {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-color: #f0f0f0
+}
+
+.footernl button {
+  float: left;
+  width: 30%;
+  border-radius: 0 4px 4px 0;
+  background-color: #c7438e;
+  border-color: #c7438e
+}
+
+footer, footer a {
+  color: #c9c9c9
+}
+
+footer a:hover, footer a:active, footer a:focus {
+  color: white;
+  text-decoration: none
+}
+
+footer li:hover {
+  color: white
+}
+
+footer .container {
+  background: 0
+}
+.babicon {
+  font-family: 'baby';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /*! Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.babicon-sofort:before {
+  content: "\e614"
+}
+
+.babicon-dhl:before {
+  content: "\e62d"
+}
+
+.babicon-klarna:before {
+  content: "\e62e"
+}
+
+.babicon-master:before {
+  content: "\e611"
+}
+
+.babicon-paypal:before {
+  content: "\e612"
+}
+
+.babicon-visa:before {
+  content: "\e613"
+}
+
+.babicon-amazon:before {
+  content: "\e610"
+}
+
+.babicon-forwarding:before {
+  content: "\e600"
+}
+
+.babicon-user:before {
+  content: "\e601"
+}
+
+.babicon-babyartikel-basket:before {
+  content: "\e602"
+}
+
+.babicon-babyartikel-basketplus:before {
+  content: "\e60f"
+}
+
+.babicon-kueken:before {
+  content: "\e603"
+}
+
+.babicon-mail:before {
+  content: "\e604"
+}
+
+.babicon-twitter:before {
+  content: "\e605"
+}
+
+.babicon-facebook:before {
+  content: "\e606"
+}
+
+.babicon-google:before {
+  content: "\e607"
+}
+
+.babicon-pinterest:before {
+  content: "\e608"
+}
+
+.babicon-youtube:before {
+  content: "\e609"
+}
+
+.babicon-instagram:before {
+  content: "\e60a"
+}
+
+.babicon-wordpress:before {
+  content: "\e60b"
+}
+
+.babicon-heart:before {
+  content: "\e60c"
+}
+
+.babicon-check:before {
+  content: "\e60d"
+}
+
+.babicon-share:before {
+  content: "\e60e"
+}
