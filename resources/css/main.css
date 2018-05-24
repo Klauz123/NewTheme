@@ -10,6 +10,10 @@ body {
 body > #vue-app, body > #vue-error{
   background-color: #ffffff;
 }
+.wrapper-main #page-body
+{
+  background-color: #ffffff;
+}
 /*Payment Informations in Footer*/
 .pay160614 {
   list-style-type: none;
