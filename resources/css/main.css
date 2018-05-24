@@ -9,3 +9,156 @@ body {
 .page-content {
 	background-color: #ffffff;
 }
+
+
+/*Payment Informations in Footer*/
+.pay160614 {
+  list-style-type: none;
+  padding: 0
+}
+
+@media(max-width:767px) {
+  .pay160614 {
+    padding: 0 15px
+  }
+}
+
+.pay160614 li {
+  float: left;
+  width: 14.28%;
+  background-size: auto 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: -webkit-optimize-contrast
+}
+
+.pay160614 li a {
+  display: block;
+  height: 40px;
+  width: 100%
+}
+
+@media(max-width:590px) {
+  .pay160614 li a {
+    height: 30px
+  }
+}
+
+@media(max-width:500px) {
+  .pay160614 li a {
+    height: 20px
+  }
+}
+
+.pay160614 li.paypal {
+  background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/paypal.png')
+}
+
+.pay160614 li.amazon {
+  background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/amazon.png')
+}
+
+.pay160614 li.klarna {
+  background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/klarna.png')
+}
+
+.pay160614 li.sofort {
+  background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/sofort.png')
+}
+
+.pay160614 li.mastercard {
+  background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/mastercard.png')
+}
+
+.pay160614 li.visa {
+  background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/visa.png')
+}
+
+.pay160614 li.dhl {
+  background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/dhl.png')
+}
+/*Footer Social Media */
+
+.socials160613 a {
+  text-decoration: none;
+  font-size: 22px
+}
+
+/*Footer Service, Newsletter, Certificate*/
+.middlefooter ul {
+  list-style-type: none;
+  padding-left: 10px
+}
+
+.middlefooter ul li {
+  padding: 2px 0
+}
+
+.middlefooter li:before {
+  content: "\00b7";
+  margin-right: 15px
+}
+
+.middlefooter li.phone {
+  font-size: 16px;
+  margin-bottom: -8px
+}
+
+.middlefooter li.phone:before {
+  content: "\e182";
+  font-family: 'Glyphicons Halflings';
+  margin: 0 8px 0 -6px
+}
+
+.middlefooter li.mail {
+  font-size: 16px
+}
+
+.middlefooter li.mail:before {
+  content: "\e171";
+  font-family: 'Glyphicons Halflings';
+  margin: 0 10px 0 -8px
+}
+
+.middlefooter li.noicon:before {
+  content: "";
+  margin-right: 18px
+}
+
+.middlefooter .disclaimer, .middlefooter .disclaimer a {
+  color: #5c5c5c
+}
+
+@media(min-width:768px) {
+  .middlefooter .disclaimer {
+    text-align: right
+  }
+}
+
+/* Trusted Shop Icon */
+.trust160701 {
+  display: block;
+  background-image: url("https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/trusted.png");
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background-size: 100%;
+  image-rendering: -webkit-optimize-contrast
+}
+
+/*Post footer */
+.postfooter {
+  background: #1d1d1d;
+  box-shadow: none
+}
+
+.postfooter .container {
+  padding: 40px 0
+}
+@media(max-width:767px) {
+  .postfooter .col-sm-8, .postfooter .col-sm-4 {
+    text-align: center
+  }
+}
