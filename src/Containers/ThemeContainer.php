@@ -8,6 +8,6 @@ class ThemeContainer
 {
     public function call(Twig $twig):string
     {
-        return $twig->render('Theme::content.ThemeFooter');
+        return $twig->render('Theme::content.Theme');
     }
 }
