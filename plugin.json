@@ -1,7 +1,7 @@
 {
   "name"                  :"Theme",
   "description"           :"Basic theme plugin",
-  "namespace"             :"Theme",
+  "namespace"             :"Ceres",
   "author"                :"Your name",
   "keywords"              : ["theme", "Ceres", "template"],
   "type"                  :"theme",
