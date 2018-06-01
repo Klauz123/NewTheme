@@ -86,6 +86,9 @@ body > #vue-app, body > #vue-error{
 .pay160614 li.dhl {
   background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/dhl.png')
 }
+.pay160614 li.dpd {
+  background-image: url('https://www.ml-handel-shop.de//layout/ml-handel/img/shipping_provider/dpd-logo.png')
+}
 /*Footer Social Media */
 
 .socials160613 a {
