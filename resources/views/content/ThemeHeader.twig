@@ -1,0 +1,35 @@
+{% set companyLogo  = config("Ceres.header.company_logo") %}
+{% set lang         = services.sessionStorage.getLang() %}
+{% set showHeaderNavBar = config("Ceres.header.show_navbars") %}
+{% set companyName  = config("Ceres.header.company_name") %}
+{% set useMegaMenu  = config("Ceres.header.megamenu_levels") > 1 %}
+
+<nav class="navbar{% if useMegaMenu %} megamenu{%endif%}">
+      <div class="container-max">
+        <div class="header__row"><a class="header__logo" href="/"><svg class="svg svg-babymarkt-logo"><use xlink:href="/bundles/babymarktfrontend/desktop-bm_de_de/svg/sprite.svg?20180524104518#babymarkt-logo"></use></svg></a><div class="header__item header__item--nav"><nav class="area-navigation"><a class="area-navigation__link" href="/">Produkte</a><a class="area-navigation__link" href="/beratung/">
+                                Beratung
+                            </a><a class="area-navigation__link" href="/geschenke/">
+                                Geschenkideen
+                            </a></nav></div><div class="header__item header__item--user-nav"><nav class="user-navigation"><a class="user-navigation__item" href="https://www.babymarkt.de/index.php?cl=account"><div class="user-navigation__icon"><svg class="svg svg-person"><use xlink:href="/bundles/babymarktfrontend/desktop-bm_de_de/svg/sprite.svg?20180524104518#person"></use></svg></div>
+                            Mein Konto
+                        </a><a class="user-navigation__item" href="//www.babymarkt.de/index.php?cl=account_noticelist"><div class="user-navigation__icon"><svg class="svg svg-heart"><use xlink:href="/bundles/babymarktfrontend/desktop-bm_de_de/svg/sprite.svg?20180524104518#heart"></use></svg></div>
+                            Wunschzettel
+                        </a><a class="user-navigation__item" href="/warenkorb/"><div class="user-navigation__icon user-navigation__icon--blank"><svg class="svg svg-bag"><use xlink:href="/bundles/babymarktfrontend/desktop-bm_de_de/svg/sprite.svg?20180524104518#bag"></use></svg></div>
+                        Warenkorb
+                    </a></nav></div></div>
+        <div class="row">
+
+
+            <div id="mainNavbarCollapsable">
+                <ul class="breadcrumb">
+                    <li class="btnClose"></li>
+                </ul>
+                {% if showHeaderNavBar == "top" or showHeaderNavBar == "both" or not services.template.isCategory() %}
+                    {# includeCached('Ceres::PageDesign.Partials.Header.NavigationList.twig') #}
+                    {% include "Ceres::PageDesign.Partials.Header.NavigationList" %}
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</nav>

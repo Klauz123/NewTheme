@@ -25,7 +25,12 @@ class ThemeServiceProvider extends ServiceProvider
     {
         $eventDispatcher->listen('IO.init.templates', function(Partial $partial)
         {
-          $partial->set('footer', 'Theme::PageDesign.Partials.Footer'); // Override Footer
+           $partial->set('footer', 'Theme::content.ThemeFooter');
+        }, 0);
+        return false;
+				$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
+        {
+           $partial->set('navigation', 'Theme::content.ThemeHeader');
         }, 0);
         return false;
     }
