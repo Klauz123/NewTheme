@@ -30,7 +30,7 @@ class ThemeServiceProvider extends ServiceProvider
         return false;
 				$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
         {
-           $partial->set('navigation', 'Theme::content.ThemeHeader');
+           $partial->set('header', 'Theme::content.ThemeHeader');
         }, 0);
         return false;
     }
