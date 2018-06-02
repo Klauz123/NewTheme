@@ -4,45 +4,7 @@
 {% set companyName = config("Ceres.header.company_name") %}
 {% set useMegaMenu = config("Ceres.header.megamenu_levels") > 1 %}
 
-<div class="header__row">
-  <a class="header__logo" href="/">
-    <img src="https://ml-handel-shop.de/layout/ml-handel/img/company_logo.jpg"
-  </a>
-  <div class="header__item header__item--nav">
-    <nav class="area-navigation">
-      <a class="area-navigation__link" href="/">Produkte</a>
-      <a class="area-navigation__link" href="/beratung/">
-        Beratung
-      </a>
-      <a class="area-navigation__link" href="/geschenke/">
-        Geschenkideen
-      </a>
-    </nav>
-  </div>
-  <div class="header__item header__item--user-nav">
-    <nav class="user-navigation">
-      <a class="user-navigation__item" href="#account">
-        <div class="user-navigation__icon">
-          <span class="glyphicons glyphicons-user"></span>
-        </div>
-        Mein Konto
-      </a>
-      <a class="user-navigation__item" href="//www.babymarkt.de/index.php?cl=account_noticelist">
-        <div class="user-navigation__icon">
-          <span class="glyphicons glyphicons-heart"></span>
-        </div>
-        Wunschzettel
-      </a>
-      <a class="user-navigation__item" href="/warenkorb/">
-        <div class="user-navigation__icon user-navigation__icon--blank">
-          <span class="glyphicons glyphicons-shopping-cart"></span>
-        </div>
-        Warenkorb
-      </a>
-    </nav>
-  </div>
-</div>
-
+<h1> TEST TEST TEST IN NAVIGATION TWIG </h1>
 <nav class="navbar{% if useMegaMenu %} megamenu{%endif%}">
   <div class="container-max">
     <div class="row">
