@@ -14,7 +14,10 @@ body {
 .page-content {
 	background-color: #ffffff;
 }
+.navbar{
+    background-color: #ffffff;
 
+}
 body > #vue-app, body > #vue-error{
   background-color: #ffffff;
 }
