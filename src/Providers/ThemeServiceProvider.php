@@ -27,7 +27,7 @@ class ThemeServiceProvider extends ServiceProvider
         {
            $partial->set('footer', 'Theme::content.ThemeFooter');
 					 $partial->set('navigation', 'Theme::content.ThemeHeaderNavigation');
-					 $partial->set('header', 'Theme::content.ThemeHeaderNavigation');
+					 $partial->set('header', 'Theme::content.ThemeHeader');
 
 
 
