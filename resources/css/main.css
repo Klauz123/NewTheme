@@ -8,6 +8,11 @@
 /* Change background colour */
 body {
     background-color: #ffffff;
+
+}
+.top-bar {
+  background-color: #ffffff;
+  color: #000000;
 }
 .page-content {
 	background-color: #ffffff;
