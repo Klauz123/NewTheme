@@ -330,3 +330,111 @@ footer .container {
 .babicon-share:before {
   content: "\e60e"
 }
+/*Header Styling */
+.header__row {
+  border-bottom: 1px solid #d0d0d0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 15px;
+  position: relative
+}
+.header__item--user-nav {
+  width: 25%
+}
+
+.header__item--nav {
+  width: 75%
+}
+
+.header__item--search {
+  padding-left: 15px;
+  width: 25%
+}
+
+.header__logo {
+  height: 100%;
+  left: 50%;
+  max-width: 250px;
+  position: absolute;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0)
+}
+
+.header__logo .svg-babymarkt-logo, .header__logo .svg-babymarkt-logo-xmas {
+  height: 48px;
+  margin-top: 8px
+}
+.user-navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  line-height: 10px;
+  padding: 10px 0 10px 15px;
+  text-align: right
+}
+
+.user-navigation__item {
+  color: gray;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none
+}
+
+.user-navigation__item:hover {
+  text-decoration: none
+}
+
+.user-navigation__icon {
+  background-color: #d0d0d0;
+  border-radius: 50%;
+  display: block;
+  height: 30px;
+  margin: 0 auto 7px;
+  position: relative;
+  text-align: center;
+  width: 30px
+}
+
+.user-navigation__icon--blank {
+  background: none;
+  width: 35px
+}
+
+.user-navigation__notification {
+  background-color: #dc066b;
+  border-radius: 50%;
+  bottom: 0;
+  color: #fff;
+  font-size: 10px;
+  left: -4px;
+  line-height: 13px;
+  min-width: 13px;
+  padding: 0 2px;
+  position: absolute;
+  text-align: center
+}
+
+.user-navigation .svg-heart {
+  color: #fff;
+  margin-top: 1px;
+  stroke-width: 0;
+  width: 22px
+}
+
+.user-navigation .svg-person {
+  margin-top: -1px;
+  width: 18px
+}
