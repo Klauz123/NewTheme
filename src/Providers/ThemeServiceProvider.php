@@ -2,6 +2,7 @@
 
 namespace Theme\Providers;
 
+use IO\Helper\TemplateContainer;
 use IO\Extensions\Functions\Partial;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
@@ -26,6 +27,8 @@ class ThemeServiceProvider extends ServiceProvider
         $eventDispatcher->listen('IO.init.templates', function(Partial $partial)
         {
            $partial->set('footer', 'Theme::content.ThemeFooter');
+					 $partial->set('headernavigation', 'Theme::content.ThemeHeaderNavigation');
+
 					 $partial->set('header', 'Theme::content.ThemeHeader');
 
 
@@ -33,7 +36,6 @@ class ThemeServiceProvider extends ServiceProvider
 
         }, 0);
         return false;
-
 
     }
 }
