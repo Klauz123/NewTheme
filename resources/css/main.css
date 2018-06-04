@@ -449,3 +449,9 @@ footer .container {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.container-max {
+    max-width: 1200px;
+    margin-top: -44px;
+    z-index: auto;
+}
