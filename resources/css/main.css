@@ -440,16 +440,12 @@ footer .container {
 }
 
 
-/*carousel */
-.carousel-inner img {
-     width: 100%; /* Set width to 100% */
-     margin: auto;
-     min-height:200px;
- }
-
- /* Hide the carousel text when the screen is less than 600 pixels wide */
- @media (max-width: 600px) {
-   .carousel-caption {
-     display: none;
-   }
- }
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
