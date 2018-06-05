@@ -14,262 +14,260 @@
 {% set currencyFormat = config("Ceres.currency.format") %}
 {% set currencyFormatSelect = config("Ceres.currency.format_selection") %}
 
-<div class="wrapper wrapper-main ">
-  <header class="header-absolute  header-home">
-    <div class="section-head">
-      <div class="container">
-        <div class="row top-row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="top-menu">
-              <ul id="controlsList" class="inline">
-                <li class="hidden-xs">
-                  <a href="/contact" title="Kontakt">Kontakt</a>
-                </li>
-                <li class="list-inline-item control-usmer">
-                  <div id="login-change">
-                    <!---->
-                    <div>
-                      <a data-toggle="modal" href="#login">
-                        <i aria-hidden="true" class="fa fa-user"></i>
-                        <span class="hidden-xs-down">Anmelden</span></a>
-                      <span class="pipe"></span>
-                      <a data-toggle="modal" href="#registration">
-                        <i aria-hidden="true" class="fa fa-user-plus"></i>
-                        <span class="hidden-xs-down">Registrieren</span></a>
-                    </div>
+<header class="header-absolute  header-home">
+  <div class="section-head">
+    <div class="container">
+      <div class="row top-row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="top-menu">
+            <ul id="controlsList" class="inline">
+              <li class="hidden-xs">
+                <a href="/contact" title="Kontakt">Kontakt</a>
+              </li>
+              <li class="list-inline-item control-usmer">
+                <div id="login-change">
+                  <!---->
+                  <div>
+                    <a data-toggle="modal" href="#login">
+                      <i aria-hidden="true" class="fa fa-user"></i>
+                      <span class="hidden-xs-down">Anmelden</span></a>
+                    <span class="pipe"></span>
+                    <a data-toggle="modal" href="#registration">
+                      <i aria-hidden="true" class="fa fa-user-plus"></i>
+                      <span class="hidden-xs-down">Registrieren</span></a>
                   </div>
-                </li>
-                <li class="list-inline-item dropdown control-languages">
-                  <a data-toggle="collapse" href="#countrySettings" aria-expanded="false" aria-controls="countrySettings" data-parent="#controlsList">
-                    <i class="flag-icon flag-icon-de"></i>
+                </div>
+              </li>
+              <li class="list-inline-item dropdown control-languages">
+                <a data-toggle="collapse" href="#countrySettings" aria-expanded="false" aria-controls="countrySettings" data-parent="#controlsList">
+                  <i class="flag-icon flag-icon-de"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-nav sticky">
+    <div class="container">
+      <div class="header-bottom-wrap row">
+        <div class="col-lg-2 col-md-4 col-sm-7 col-xs-12 logo-holder">
+          <div class="logo">
+            <a href="/" title="MyFoodful"><img alt="MyFoodful" title="MyFoodful" src="https://www.myfoodful.de/layout/ebay/foodful.png" class="logo-img"></a>
+          </div>
+        </div>
+        <div class="col-lg-10 col-md-8 col-sm-5 col-xs-12 center-xs">
+          <div class="row">
+            <nav class="mainNavigation navbar megamenu">
+              <ul id="wrap" class="service-wrap">
+                <li class="wish-list-menu">
+                  <a href="/wish-list">
+                    <span class="badge-right">0</span>
+                    <i aria-hidden="true" class="fa fa-heart-o"></i>
                   </a>
                 </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section-nav sticky">
-      <div class="container">
-        <div class="header-bottom-wrap row">
-          <div class="col-lg-2 col-md-4 col-sm-7 col-xs-12 logo-holder">
-            <div class="logo">
-              <a href="/" title="MyFoodful"><img alt="MyFoodful" title="MyFoodful" src="https://www.myfoodful.de/layout/ebay/foodful.png" class="logo-img"></a>
-            </div>
-          </div>
-          <div class="col-lg-10 col-md-8 col-sm-5 col-xs-12 center-xs">
-            <div class="row">
-              <nav class="mainNavigation navbar megamenu">
-                <ul id="wrap" class="service-wrap">
-                  <li class="wish-list-menu">
-                    <a href="/wish-list">
-                      <span class="badge-right">0</span>
-                      <i aria-hidden="true" class="fa fa-heart-o"></i>
-                    </a>
-                  </li>
-                  <li class="search icon-search">
-                    <i class="fa fa-search"></i>
-                  </li>
-                  <li class="basket">
-                    <a href="#" class="toggle-basket-preview">
-                      <span class="relative">
-                        <i aria-hidden="true" class="fa fa-shopping-cart"></i>
-                        <span class="badge-right">0</span></span></a>
-                  </li>
-                  <li id="btnMainMenuToggler" class="hidden-lg-up">
-                    <i aria-hidden="true" class="fa fa-bars"></i>
-                  </li>
-                </ul>
-                <div id="mainNavbarCollapsable">
-                  <ul class="mainmenu">
-                    <li class="ddown">
-                      <a href="/feinschmecker" data-category-id="507" data-category-type="item">Feinschmecker</a>
-                      <span data-toggle="collapse" href="#navDropdown0" aria-expanded="false" class="hidden-lg-up nav-direction">
-                        <i aria-hidden="true" class="fa fa-caret-down"></i>
-                      </span>
-                      <ul data-level="1" id="navDropdown0" class="collapse">
-                        <li class="level1">
-                          <a href="/feinschmecker/fruechte-gemuese-pilze" data-category-id="775" data-category-type="item">Früchte, Gemüse &amp; Pilze</a>
-                        </li>
-                        <li class="level1">
-                          <a href="/feinschmecker/fertiggerichte" data-category-id="508" data-category-type="item">Fertiggerichte</a>
-                        </li>
-                        <li class="level1">
-                          <a href="/feinschmecker/fuer-den-vorrat" data-category-id="509" data-category-type="item">Für den Vorrat</a>
-                          <ul>
-                            <li class="level2">
-                              <a href="/feinschmecker/fuer-den-vorrat/backmischungen" data-category-id="518" data-category-type="item">Backmischungen</a>
-                            </li>
-                            <li class="level2">
-                              <a href="/feinschmecker/fuer-den-vorrat/backzutaten-dekoration" data-category-id="519" data-category-type="item">Backzutaten &amp; Dekoration</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="level1">
-                          <a href="/feinschmecker/honig-konfituere-brotaufstriche" data-category-id="510" data-category-type="item">Honig/Konfitüre/Brotaufstriche</a>
-                        </li>
-                        <li class="level1">
-                          <a href="/feinschmecker/kaffee-tee-kakao" data-category-id="511" data-category-type="item">Kaffee, Tee &amp; Kakao</a>
-                          <ul>
-                            <li class="level2">
-                              <a href="/feinschmecker/kaffee-tee-kakao/kakao" data-category-id="529" data-category-type="item">Kakao</a>
-                            </li>
-                            <li class="level2">
-                              <a href="/feinschmecker/kaffee-tee-kakao/zubehoer" data-category-id="531" data-category-type="item">Zubehör</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="level1">
-                          <a href="/feinschmecker/knabberartikel" data-category-id="512" data-category-type="item">Knabberartikel</a>
-                          <ul>
-                            <li class="level2">
-                              <a href="/feinschmecker/knabberartikel/salzgebaeck" data-category-id="535" data-category-type="item">Salzgebäck</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="level1">
-                          <a href="/feinschmecker/wuerzen-verfeinern" data-category-id="515" data-category-type="item">Würzen &amp; verfeinern</a>
-                          <ul>
-                            <li class="level2">
-                              <a href="/feinschmecker/wuerzen-verfeinern/ketchup-mayonnaise" data-category-id="550" data-category-type="item">Ketchup &amp; Mayonnaise</a>
-                            </li>
-                            <li class="level2">
-                              <a href="/feinschmecker/wuerzen-verfeinern/senf" data-category-id="553" data-category-type="item">Senf</a>
-                            </li>
-                            <li class="level2">
-                              <a href="/feinschmecker/wuerzen-verfeinern/sonstige" data-category-id="555" data-category-type="item">Sonstige</a>
-                            </li>
-                            <li class="level2 bt-more">
-                              <a href="/feinschmecker/wuerzen-verfeinern" data-category-id="515" data-category-type="item">Mehr...</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="ddown">
-                      <a href="/haustier" data-category-id="664" data-category-type="item">Haustier</a>
-                      <span data-toggle="collapse" href="#navDropdown1" aria-expanded="false" class="hidden-lg-up nav-direction">
-                        <i aria-hidden="true" class="fa fa-caret-down"></i>
-                      </span>
-                      <ul data-level="1" id="navDropdown1" class="collapse">
-                        <li class="level1">
-                          <a href="/haustier/katzen" data-category-id="685" data-category-type="item">Katzen</a>
-                          <ul>
-                            <li class="level2">
-                              <a href="/haustier/katzen/katzenfutter" data-category-id="745" data-category-type="item">Katzenfutter</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="ddown">
-                      <a href="/gastro" data-category-id="666" data-category-type="item">Gastro</a>
-                      <span data-toggle="collapse" href="#navDropdown2" aria-expanded="false" class="hidden-lg-up nav-direction">
-                        <i aria-hidden="true" class="fa fa-caret-down"></i>
-                      </span>
-                      <ul data-level="1" id="navDropdown2" class="collapse">
-                        <li class="level1">
-                          <a href="/gastro/gastro-nahrungsmittelgewerbe" data-category-id="691" data-category-type="item">Gastro &amp; Nahrungsmittelgewerbe</a>
-                          <ul>
-                            <li class="level2">
-                              <a href="/gastro/gastro-nahrungsmittelgewerbe/gastronomie-lebensmittel" data-category-id="692" data-category-type="item">Gastronomie-Lebensmittel</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="mobile-navigation">
-    <ul class="breadcrumb">
-      <li class="btn-close"></li>
-      <li class="breadcrumb-item">
-        <i aria-hidden="true" class="fa fa-home"></i>
-      </li>
-    </ul>
-    <ul id="menu-1" class="mainmenu menu-active">
-      <!---->
-      <li class="ddown">
-        <a href="/feinschmecker" data-category-id="507" data-category-type="item">Feinschmecker</a>
-        <span class="nav-direction">
-          <i aria-hidden="true" class="fa fa-lg fa-caret-right"></i></span></li>
-      <li class="ddown">
-        <a href="/haustier" data-category-id="664" data-category-type="item">Haustier</a>
-        <span class="nav-direction">
-          <i aria-hidden="true" class="fa fa-lg fa-caret-right"></i></span></li>
-      <li class="ddown">
-        <a href="/gastro" data-category-id="666" data-category-type="item">Gastro</a>
-        <span class="nav-direction">
-          <i aria-hidden="true" class="fa fa-lg fa-caret-right"></i></span></li>
-    </ul>
-    <ul id="menu-2" class="mainmenu">
-      <!---->
-    </ul>
-  </div>
-  <div class="search-control">
-    <div class="inner">
-      <i class="fa fa-close close-search-control"></i>
-      <div class="box-search">
-        <p class="title">Suchbegriff eingeben</p>
-        <div id="searchBox" class="box-search-inner">
-          <div class="search-box-inner">
-            <div class="search-box-shadow-frame"><input type="search" autofocus="autofocus" class="search-input" autocomplete="off">
-              <button type="submit" class="search-submit">
-                <i class="fa fa-search sm-up"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div country-flag-prefix="flag-icon-">
-    <div id="countrySettings" class="row cmp cmp-country-settings no-margin collapse">
-      <div class="container">
-        <div class="row no-padding">
-          <div class="country-settings-inner languages col-lg-6">
-            <div class="language-settings">
-              <div class="list-title">
-                <strong>Sprache</strong><hr></div>
-              <ul>
-                <li class="active">
-                  <a href="https://www.myfoodful.de/de" data-update-url="">
-                    <i class="flag-icon flag-icon-de"></i>Deutsch</a>
+                <li class="search icon-search">
+                  <i class="fa fa-search"></i>
+                </li>
+                <li class="basket">
+                  <a href="#" class="toggle-basket-preview">
+                    <span class="relative">
+                      <i aria-hidden="true" class="fa fa-shopping-cart"></i>
+                      <span class="badge-right">0</span></span></a>
+                </li>
+                <li id="btnMainMenuToggler" class="hidden-lg-up">
+                  <i aria-hidden="true" class="fa fa-bars"></i>
                 </li>
               </ul>
-            </div>
+              <div id="mainNavbarCollapsable">
+                <ul class="mainmenu">
+                  <li class="ddown">
+                    <a href="/feinschmecker" data-category-id="507" data-category-type="item">Feinschmecker</a>
+                    <span data-toggle="collapse" href="#navDropdown0" aria-expanded="false" class="hidden-lg-up nav-direction">
+                      <i aria-hidden="true" class="fa fa-caret-down"></i>
+                    </span>
+                    <ul data-level="1" id="navDropdown0" class="collapse">
+                      <li class="level1">
+                        <a href="/feinschmecker/fruechte-gemuese-pilze" data-category-id="775" data-category-type="item">Früchte, Gemüse &amp; Pilze</a>
+                      </li>
+                      <li class="level1">
+                        <a href="/feinschmecker/fertiggerichte" data-category-id="508" data-category-type="item">Fertiggerichte</a>
+                      </li>
+                      <li class="level1">
+                        <a href="/feinschmecker/fuer-den-vorrat" data-category-id="509" data-category-type="item">Für den Vorrat</a>
+                        <ul>
+                          <li class="level2">
+                            <a href="/feinschmecker/fuer-den-vorrat/backmischungen" data-category-id="518" data-category-type="item">Backmischungen</a>
+                          </li>
+                          <li class="level2">
+                            <a href="/feinschmecker/fuer-den-vorrat/backzutaten-dekoration" data-category-id="519" data-category-type="item">Backzutaten &amp; Dekoration</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="level1">
+                        <a href="/feinschmecker/honig-konfituere-brotaufstriche" data-category-id="510" data-category-type="item">Honig/Konfitüre/Brotaufstriche</a>
+                      </li>
+                      <li class="level1">
+                        <a href="/feinschmecker/kaffee-tee-kakao" data-category-id="511" data-category-type="item">Kaffee, Tee &amp; Kakao</a>
+                        <ul>
+                          <li class="level2">
+                            <a href="/feinschmecker/kaffee-tee-kakao/kakao" data-category-id="529" data-category-type="item">Kakao</a>
+                          </li>
+                          <li class="level2">
+                            <a href="/feinschmecker/kaffee-tee-kakao/zubehoer" data-category-id="531" data-category-type="item">Zubehör</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="level1">
+                        <a href="/feinschmecker/knabberartikel" data-category-id="512" data-category-type="item">Knabberartikel</a>
+                        <ul>
+                          <li class="level2">
+                            <a href="/feinschmecker/knabberartikel/salzgebaeck" data-category-id="535" data-category-type="item">Salzgebäck</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="level1">
+                        <a href="/feinschmecker/wuerzen-verfeinern" data-category-id="515" data-category-type="item">Würzen &amp; verfeinern</a>
+                        <ul>
+                          <li class="level2">
+                            <a href="/feinschmecker/wuerzen-verfeinern/ketchup-mayonnaise" data-category-id="550" data-category-type="item">Ketchup &amp; Mayonnaise</a>
+                          </li>
+                          <li class="level2">
+                            <a href="/feinschmecker/wuerzen-verfeinern/senf" data-category-id="553" data-category-type="item">Senf</a>
+                          </li>
+                          <li class="level2">
+                            <a href="/feinschmecker/wuerzen-verfeinern/sonstige" data-category-id="555" data-category-type="item">Sonstige</a>
+                          </li>
+                          <li class="level2 bt-more">
+                            <a href="/feinschmecker/wuerzen-verfeinern" data-category-id="515" data-category-type="item">Mehr...</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="ddown">
+                    <a href="/haustier" data-category-id="664" data-category-type="item">Haustier</a>
+                    <span data-toggle="collapse" href="#navDropdown1" aria-expanded="false" class="hidden-lg-up nav-direction">
+                      <i aria-hidden="true" class="fa fa-caret-down"></i>
+                    </span>
+                    <ul data-level="1" id="navDropdown1" class="collapse">
+                      <li class="level1">
+                        <a href="/haustier/katzen" data-category-id="685" data-category-type="item">Katzen</a>
+                        <ul>
+                          <li class="level2">
+                            <a href="/haustier/katzen/katzenfutter" data-category-id="745" data-category-type="item">Katzenfutter</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="ddown">
+                    <a href="/gastro" data-category-id="666" data-category-type="item">Gastro</a>
+                    <span data-toggle="collapse" href="#navDropdown2" aria-expanded="false" class="hidden-lg-up nav-direction">
+                      <i aria-hidden="true" class="fa fa-caret-down"></i>
+                    </span>
+                    <ul data-level="1" id="navDropdown2" class="collapse">
+                      <li class="level1">
+                        <a href="/gastro/gastro-nahrungsmittelgewerbe" data-category-id="691" data-category-type="item">Gastro &amp; Nahrungsmittelgewerbe</a>
+                        <ul>
+                          <li class="level2">
+                            <a href="/gastro/gastro-nahrungsmittelgewerbe/gastronomie-lebensmittel" data-category-id="692" data-category-type="item">Gastronomie-Lebensmittel</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
-          <div class="country-settings-inner countries col-lg-6">
-            <div class="shipping-settings">
-              <div class="list-title">
-                <strong>Lieferland</strong><hr></div>
-              <ul>
-                <div>
-                  <li class="active">
-                    <a data-toggle="collapse" href="#countrySettings" data-placement="top" class="" data-title="" data-original-title="">
-                      <i class="flag-icon flag-icon-de"></i>
-                      Deutschland
-                    </a>
-                  </li>
-                </div>
-                <div>
-                  <li class="">
-                    <a data-toggle="collapse" href="#countrySettings" data-placement="top" class="" data-title="" data-original-title="">
-                      <i class="flag-icon flag-icon-at"></i>
-                      Österreich
-                    </a>
-                  </li>
-                </div>
-              </ul>
-            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="mobile-navigation">
+  <ul class="breadcrumb">
+    <li class="btn-close"></li>
+    <li class="breadcrumb-item">
+      <i aria-hidden="true" class="fa fa-home"></i>
+    </li>
+  </ul>
+  <ul id="menu-1" class="mainmenu menu-active">
+    <!---->
+    <li class="ddown">
+      <a href="/feinschmecker" data-category-id="507" data-category-type="item">Feinschmecker</a>
+      <span class="nav-direction">
+        <i aria-hidden="true" class="fa fa-lg fa-caret-right"></i></span></li>
+    <li class="ddown">
+      <a href="/haustier" data-category-id="664" data-category-type="item">Haustier</a>
+      <span class="nav-direction">
+        <i aria-hidden="true" class="fa fa-lg fa-caret-right"></i></span></li>
+    <li class="ddown">
+      <a href="/gastro" data-category-id="666" data-category-type="item">Gastro</a>
+      <span class="nav-direction">
+        <i aria-hidden="true" class="fa fa-lg fa-caret-right"></i></span></li>
+  </ul>
+  <ul id="menu-2" class="mainmenu">
+    <!---->
+  </ul>
+</div>
+<div class="search-control">
+  <div class="inner">
+    <i class="fa fa-close close-search-control"></i>
+    <div class="box-search">
+      <p class="title">Suchbegriff eingeben</p>
+      <div id="searchBox" class="box-search-inner">
+        <div class="search-box-inner">
+          <div class="search-box-shadow-frame"><input type="search" autofocus="autofocus" class="search-input" autocomplete="off">
+            <button type="submit" class="search-submit">
+              <i class="fa fa-search sm-up"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div country-flag-prefix="flag-icon-">
+  <div id="countrySettings" class="row cmp cmp-country-settings no-margin collapse">
+    <div class="container">
+      <div class="row no-padding">
+        <div class="country-settings-inner languages col-lg-6">
+          <div class="language-settings">
+            <div class="list-title">
+              <strong>Sprache</strong><hr></div>
+            <ul>
+              <li class="active">
+                <a href="https://www.myfoodful.de/de" data-update-url="">
+                  <i class="flag-icon flag-icon-de"></i>Deutsch</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="country-settings-inner countries col-lg-6">
+          <div class="shipping-settings">
+            <div class="list-title">
+              <strong>Lieferland</strong><hr></div>
+            <ul>
+              <div>
+                <li class="active">
+                  <a data-toggle="collapse" href="#countrySettings" data-placement="top" class="" data-title="" data-original-title="">
+                    <i class="flag-icon flag-icon-de"></i>
+                    Deutschland
+                  </a>
+                </li>
+              </div>
+              <div>
+                <li class="">
+                  <a data-toggle="collapse" href="#countrySettings" data-placement="top" class="" data-title="" data-original-title="">
+                    <i class="flag-icon flag-icon-at"></i>
+                    Österreich
+                  </a>
+                </li>
+              </div>
+            </ul>
           </div>
         </div>
       </div>
