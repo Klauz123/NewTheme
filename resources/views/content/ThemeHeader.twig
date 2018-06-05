@@ -1,8 +1,6 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 {% import "Ceres::Category.Macros.CategoryTree" as Tree %}
 
-
-
 {{ component( "Ceres::Customer.Components.UserLoginHandler" ) }}
 {{ component( "Ceres::PageDesign.Components.ShippingCountrySelect" ) }}
 {{ component( "Ceres::PageDesign.Components.MobileNavigation" ) }}
@@ -29,22 +27,11 @@
                 <a href="/contact" title="Kontakt">Kontakt</a>
               </li>
               <li class="list-inline-item control-usmer">
-                <div id="login-change">
-                  <!---->
-                  <div>
-                    <a data-toggle="modal" href="#login">
-                      <i aria-hidden="true" class="fa fa-user"></i>
-                      <span class="hidden-xs-down">Anmelden</span></a>
-                    <span class="pipe"></span>
-                    <a data-toggle="modal" href="#registration">
-                      <i aria-hidden="true" class="fa fa-user-plus"></i>
-                      <span class="hidden-xs-down">Registrieren</span></a>
-                  </div>
-                </div>
+                <user-login-handler template="#vue-user-login-handler" :user-data="{{ services.customer.getContact() | json_encode() }}"></user-login-handler>
               </li>
               <li class="list-inline-item dropdown control-languages">
-                <a data-toggle="collapse" href="#countrySettings" aria-expanded="false" aria-controls="countrySettings" data-parent="#controlsList">
-                  <i class="flag-icon flag-icon-de"></i>
+                <a class="" data-toggle="collapse" href="#countrySettings" aria-expanded="false" aria-controls="countrySettings" data-parent="#controlsList">
+                  <i class="flag-icon flag-icon-{{ lang }}"></i>
                 </a>
               </li>
             </ul>
@@ -66,111 +53,121 @@
             <nav class="mainNavigation navbar megamenu">
               <ul id="wrap" class="service-wrap">
                 <li class="wish-list-menu">
-                  <a href="/wish-list">
-                    <span class="badge-right">0</span>
-                    <i aria-hidden="true" class="fa fa-heart-o"></i>
-                  </a>
-                </li>
-                <li class="search icon-search">
-                  <i class="fa fa-search"></i>
-                </li>
-                <li class="basket">
-                  <a href="#" class="toggle-basket-preview">
-                    <span class="relative">
-                      <i aria-hidden="true" class="fa fa-shopping-cart"></i>
-                      <span class="badge-right">0</span></span></a>
-                </li>
-                <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler hidden-lg-up" type="button">
-                     &#9776;
-                 </button>
+                  <wish-list-count :init-ids="{{ services.wishList.getItemWishList() | json_encode }}"></wish-list-count>
 
-                <li id="btnMainMenuToggler" class="hidden-lg-up">
-                  <i aria-hidden="true" class="fa fa-bars"></i>
-                </li>
+                </a>
+              </li>
+              <li class="search icon-search">
+                <i class="fa fa-search"></i>
+              </li>
+              <li class="basket">
+                <a v-toggle-basket-preview="v-toggle-basket-preview" href="#" class="toggle-basket-preview">
+                  {% if config("Ceres.header.basket_values") != "sum" %}
+                    <span class="badge-right" v-basket-item-quantity="this.$store.state.basket.data.itemQuantity">0</span>
+                  {% endif %}
+
+                  <i v-waiting-animation="this.$store.state.basket.isBasketLoading" waiting-class="fa fa-refresh fa-spin" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  {% if config("Ceres.header.basket_values") != "quantity" %}
+                    {% if services.customer.showNetPrices() %}
+                      <span class="badge" v-basket-item-sum="this.$store.state.basket.data.itemSumNet">0,00
+                        {{ services.checkout.getCurrencyData()[currencyFormat] }}</span>
+                    {% else %}
+                      <span class="badge" v-basket-item-sum="this.$store.state.basket.data.itemSum">0,00
+                        {{ services.checkout.getCurrencyData()[currencyFormat] }}</span>
+                    {% endif %}
+                  {% endif %}
+                </a>
+
+                {% if config("Ceres.basket.preview_type") != "right" %}
+                  <basket-preview template="#vue-basket-preview-hover" :basket-data="{{ services.basket.getBasketForTemplate() | json_encode() }}"></basket-preview>
+                {% endif %}
+                <button id="btnMainMenuToggler" v-open-mobile-navigation="v-open-mobile-navigation" class="navbar-toggler hidden-lg-up" type="button"></button>
+
+            </ul>
+            <div id="mainNavbarCollapsable">
+              <ul class="breadcrumb">
+                <li class="btnClose"></li>
               </ul>
-              <div id="mainNavbarCollapsable">
-                <ul class="breadcrumb">
-                  <li class="btnClose"></li>
+
+              <ul class="mainmenu">
+                {{ Tree.get_nav_bar(categories, "") }}
               </ul>
-
-                <ul class="mainmenu">
-                  {{ Tree.get_nav_bar(categories, "") }}
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- breadcrumb -->
-{% if not services.template.isHome() and not services.template.isMyAccount() and not services.template.isCheckout() %}
-    {% include "Ceres::PageDesign.Partials.Header.Breadcrumb" %}
-{% endif %}
-
-{% if category.linklist == "Y" %}
-    {% set initialCategory = { id: category.id } %}
-{% else %}
-    {% set initialCategory = category %}
-{% endif %}
-
-<mobile-navigation :navigation-tree-data="{{ categories | json_encode }}" :initial-category="{{ initialCategory | json_encode }}" template="#vue-mobile-navigation"></mobile-navigation>
-
-
-
-<div class="search-control">
-  <div class="inner">
-    <i class="fa fa-close close-search-control"></i>
-    <div class="box-search">
-      <p class="title">Suchbegriff eingeben</p>
-      <div id="searchBox" class="box-search-inner">
-        <div class="search-box-inner">
-          <div class="search-box-shadow-frame"><item-search template="#vue-item-search"></item-search>
-
-            </button>
-          </div>
+            </div>
+          </nav>
         </div>
       </div>
     </div>
   </div>
 </div>
+</header>
+<!-- breadcrumb -->
+{% if not services.template.isHome()and not services.template.isMyAccount()and not services.template.isCheckout() %}
+{% include "Ceres::PageDesign.Partials.Header.Breadcrumb" %}
+{% endif %}
+
+{% if category.linklist == "Y" %}
+{% set initialCategory = {
+  id: category.id
+} %}
+{% else %}
+{% set initialCategory = category %}
+{% endif %}
+
+<mobile-navigation :navigation-tree-data="{{ categories | json_encode }}" :initial-category="{{ initialCategory | json_encode }}" template="#vue-mobile-navigation"></mobile-navigation>
+
+<div class="search-control">
+<div class="inner">
+  <i class="fa fa-close close-search-control"></i>
+  <div class="box-search">
+    <p class="title">Suchbegriff eingeben</p>
+    <div id="searchBox" class="box-search-inner">
+      <div class="search-box-inner">
+        <div class="search-box-shadow-frame">
+          <item-search template="#vue-item-search"></item-search>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 <shop-country-settings country-flag-prefix="flag-icon-" :localization-data="{{ services.localization.getLocalizationData() | json_encode }}">
-           <div id="countrySettings" class="row cmp cmp-country-settings no-margin collapse">
-               <div class="container-max">
-                   <div class="row no-padding">
-                       <div class="country-settings-inner languages col-lg-6">
+<div id="countrySettings" class="row cmp cmp-country-settings no-margin collapse">
+  <div class="container-max">
+    <div class="row no-padding">
+      <div class="country-settings-inner languages col-lg-6">
 
-                           <div class="language-settings">
-                               <div class="list-title">
-                                   <strong>{{ trans("Ceres::Template.headerSelectLanguage") }}</strong>
-                                   <hr>
-                               </div>
+        <div class="language-settings">
+          <div class="list-title">
+            <strong>{{ trans("Ceres::Template.headerSelectLanguage") }}</strong>
+            <hr>
+          </div>
 
-                               {% set languageList = services.webstoreConfig.getActiveLanguageList() %}
-                               {% set languageUrls = services.url.getLanguageURLs() %}
-                               <ul>
-                                   {% for language in languageList %}
-                                       <li{% if lang == language %} class="active"{% endif %}>
-                                           <a href="{% if languageUrls[language] is defined %}{{ languageUrls[language] ~ queryString() }}{% else %}/{{ language }}{{ urls.trailingSlashSuffix }}{% endif %}" data-update-url>
-                                               <i class="flag-icon flag-icon-{{ language }}"></i>
-                                               {{ trans("Ceres::Template.header" ~ language | capitalize) }}
-                                           </a>
-                                       </li>
-                                   {% endfor %}
-                               </ul>
-                           </div>
-                       </div>
-                       <div class="country-settings-inner countries col-lg-6">
-                           <div class="shipping-settings">
-                               <div class="list-title">
-                                   <strong>{{ trans("Ceres::Template.headerSelectShippingCountry") }}</strong>
-                                   <hr>
-                               </div>
-                               <shipping-country-select :disable-input="{{ services.template.isCheckout() | json_encode() }}"></shipping-country-select>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </shop-country-settings>
+          {% set languageList = services.webstoreConfig.getActiveLanguageList() %}
+          {% set languageUrls = services.url.getLanguageURLs() %}
+          <ul>
+            {% for language in languageList %}
+              <li{% if lang == language %} class="active" {% endif %}>
+                <a href="{% if languageUrls[language] is defined %}{{ languageUrls[language] ~ queryString() }}{% else %}/{{ language }}{{ urls.trailingSlashSuffix }}{% endif %}" data-update-url="data-update-url">
+                  <i class="flag-icon flag-icon-{{ language }}"></i>
+                  {{ trans("Ceres::Template.header" ~ language | capitalize) }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="country-settings-inner countries col-lg-6">
+        <div class="shipping-settings">
+          <div class="list-title">
+            <strong>{{ trans("Ceres::Template.headerSelectShippingCountry") }}</strong>
+            <hr>
+          </div>
+          <shipping-country-select :disable-input="{{ services.template.isCheckout() | json_encode() }}"></shipping-country-select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</shop-country-settings>
