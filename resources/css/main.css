@@ -502,7 +502,7 @@ a {
 }
 
 a:focus {
-  color: #95a83f;
+  color: #61a83f;
   outline: none
 }
 
@@ -548,101 +548,101 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: #95a83f;
-  border-color: #95a83f;
+  background-color: #61a83f;
+  border-color: #61a83f;
   color: #fff
 }
 
 .btn-primary:hover {
   background-color: transparent;
-  border-color: #95a83f;
-  color: #95a83f;
+  border-color: #61a83f;
+  color: #61a83f;
   outline: none
 }
 
 .btn-primary:focus {
   background-color: transparent;
-  border-color: #95a83f;
-  color: #95a83f;
+  border-color: #61a83f;
+  color: #61a83f;
   outline: none
 }
 
 .btn-primary:active {
   background-color: transparent;
-  border-color: #95a83f;
-  color: #95a83f;
+  border-color: #61a83f;
+  color: #61a83f;
   outline: none
 }
 
 .btn-primary:active:focus {
   background-color: transparent;
-  border-color: #95a83f;
-  color: #95a83f;
+  border-color: #61a83f;
+  color: #61a83f;
   outline: none
 }
 
 .btn-primary:active:hover {
   background-color: transparent;
-  border-color: #95a83f;
-  color: #95a83f;
+  border-color: #61a83f;
+  color: #61a83f;
   outline: none
 }
 
 .btn-primary.disabled:focus {
-  background-color: #95a83f;
-  border-color: #95a83f;
+  background-color: #61a83f;
+  border-color: #61a83f;
   color: #fff
 }
 
 .btn-primary.disabled:hover {
-  background-color: #95a83f;
-  border-color: #95a83f;
+  background-color: #61a83f;
+  border-color: #61a83f;
   color: #fff
 }
 
 .btn-primary:disabled:focus {
-  background-color: #95a83f;
-  border-color: #95a83f;
+  background-color: #61a83f;
+  border-color: #61a83f;
   color: #fff
 }
 
 .btn-primary:disabled:hover {
-  background-color: #95a83f;
-  border-color: #95a83f;
+  background-color: #61a83f;
+  border-color: #61a83f;
   color: #fff
 }
 
 .btn-outline-primary {
-  color: #95a83f;
-  border-color: #95a83f;
+  color: #61a83f;
+  border-color: #61a83f;
   background: transparent
 }
 
 .btn-outline-primary.active {
-  background-color: #95a83f;
-  border-color: #95a83f;
+  background-color: #61a83f;
+  border-color: #61a83f;
   color: #fff
 }
 
 .btn-outline-primary.active:focus {
-  background-color: #95a83f;
+  background-color: #61a83f;
   border-color: #95a83f
 }
 
 .btn-outline-primary.active:hover {
-  background-color: #95a83f;
+  background-color: #61a83f;
   border-color: #95a83f
 }
 
 .btn-outline-primary:focus {
-  background-color: #95a83f;
-  border-color: #95a83f;
+  background-color: #61a83f;
+  border-color: #61a83f;
   color: #fff
 }
 
 .btn-outline-primary:hover {
-  background-color: #95a83f;
-  border-color: #95a83f;
+  background-color: #61a83f;
+  border-color: #61a83f;
   color: #fff
 }
 
@@ -671,18 +671,18 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .open>.btn-outline-primary.dropdown-toggle {
-  background-color: #95a83f;
-  border-color: #95a83f;
+  background-color: #61a83f;
+  border-color: #61a83f;
   color: #fff
 }
 
 .open>.btn-outline-primary.dropdown-toggle.focus {
-  background-color: #95a83f;
+  background-color: #61a83f;
   border-color: #95a83f
 }
 
 .open>.btn-outline-primary.dropdown-toggle:hover {
-  background-color: #95a83f;
+  background-color: #61a83f;
   border-color: #95a83f
 }
 
@@ -696,17 +696,17 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .page-item.active .page-link {
-  background-color: #95a83f;
+  background-color: #61a83f;
   border-color: #95a83f
 }
 
 .page-item.active .page-link:focus {
-  background-color: #95a83f;
+  background-color: #61a83f;
   border-color: #95a83f
 }
 
 .page-item.active .page-link:hover {
-  background-color: #95a83f;
+  background-color: #61a83f;
   border-color: #95a83f
 }
 
@@ -927,7 +927,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .badge-right {
-  background: #95a83f;
+  background: #61a83f;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -1033,8 +1033,8 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .fa-shopping-cart:before {
-  font-family: icomoon;
-  content: "\e900" !important;
+
+  content: "\f290" !important;
 }
 
 .wrapper-main .navbar {
@@ -1125,7 +1125,7 @@ a.bg-primary:focus, a.bg-primary:hover {
   color: #fff;
   font-size: 15px;
   display: inline-block;
-  background-color: #95a83f;
+  background-color: #61a83f;
   font-weight: 600;
   border: none;
   border-radius: 0;
@@ -1575,7 +1575,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .icon-box-inner {
-  border: 2px solid #95a83f;
+  border: 2px solid #61a83f;
   font-size: 15px;
   padding: 15px;
   position: relative
@@ -1583,7 +1583,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 
 .icon-box-title {
   background: #fff;
-  color: #95a83f;
+  color: #61a83f;
   left: 20%;
   right: 20%;
   padding: 0 5px;
@@ -1597,7 +1597,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .icon-circled {
-  color: #95a83f;
+  color: #61a83f;
   position: relative;
   display: inline-block;
   text-align: center;
@@ -1708,7 +1708,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 
 .banner-title {
   opacity: 1;
-  background: #95a83f;
+  background: #61a83f;
   color: #fff;
   padding: 10px;
   position: absolute;
@@ -1895,7 +1895,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 
 .cat-item .prices {
   text-align: center;
-  background: #95a83f;
+  background: #61a83f;
   border-radius: 5px;
   max-width: 70%;
   margin: 0 auto -18px;
@@ -2026,9 +2026,9 @@ a.bg-primary:focus, a.bg-primary:hover {
   margin-right: 8px;
   line-height: 24px;
   width: 28px;
-  border: 2px solid #95a83f;
+  border: 2px solid #61a83f;
   text-align: center;
-  color: #95a83f;
+  color: #61a83f;
   transition: all 0.3s
 }
 
@@ -2044,7 +2044,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 .btn-newsletter {
   display: block;
   text-align: center;
-  background: #95a83f;
+  background: #61a83f;
   color: #fff !important;
   margin: 10px auto;
   max-width: 315px
@@ -2409,7 +2409,7 @@ a.social-pinterest:hover {
 .selected-filter:before {
   content: "\f00d";
   font-family: FontAwesome;
-  color: #95a83f;
+  color: #61a83f;
   font-weight: normal;
   font-size: 10px;
   line-height: 2;
@@ -2432,7 +2432,7 @@ a.social-pinterest:hover {
 .FilterTitle:before {
   content: "\f067";
   font-family: FontAwesome;
-  color: #95a83f;
+  color: #61a83f;
   font-weight: normal;
   font-size: 10px;
   line-height: 2;
@@ -2566,7 +2566,7 @@ a.social-pinterest:hover {
 .sidebar-categories>ul>li>a:before {
   content: "\f067";
   font-family: FontAwesome;
-  color: #95a83f;
+  color: #61a83f;
   font-weight: normal;
   font-size: 10px;
   line-height: 2;
@@ -2596,7 +2596,7 @@ a.social-pinterest:hover {
 }
 
 .sidebar-categories ul li a:hover {
-  color: #95a83f;
+  color: #61a83f;
   background: transparent
 }
 
@@ -2634,7 +2634,7 @@ a.social-pinterest:hover {
 .ebene2>ul>li>ul>li>a:before {
   content: "\f067";
   font-family: FontAwesome;
-  color: #95a83f;
+  color: #61a83f;
   font-weight: normal;
   font-size: 10px;
   line-height: 2;
@@ -2660,7 +2660,7 @@ a.social-pinterest:hover {
 }
 
 .ebene2>ul>li>ul li a:hover {
-  color: #95a83f;
+  color: #61a83f;
   background: transparent
 }
 
@@ -2982,7 +2982,7 @@ a.social-pinterest:hover {
 }
 
 .single .price {
-  color: #95a83f;
+  color: #61a83f;
   font-weight: normal;
   display: inline-block;
   margin: 0
@@ -3284,73 +3284,73 @@ ul.ul-list span {
 }
 
 .checkout-rightside .btn-success {
-  background-color: #95a83f;
+  background-color: #61a83f;
   border-color: #95a83f
 }
 
 .checkout-rightside .btn-success.focus {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success:focus {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success:hover {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success.active {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success.active.focus {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success.active:focus {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success.active:hover {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success:active {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success:active.focus {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success:active:focus {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 
 .checkout-rightside .btn-success:active:hover {
   background-color: transparent;
-  border-color: #95a83f;
+  border-color: #61a83f;
   color: #95a83f
 }
 

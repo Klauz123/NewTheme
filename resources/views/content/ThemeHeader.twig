@@ -110,6 +110,8 @@
 
 <mobile-navigation :navigation-tree-data="{{ categories | json_encode }}" :initial-category="{{ initialCategory | json_encode }}" template="#vue-mobile-navigation"></mobile-navigation>
 
+
+
 <div class="search-control">
   <div class="inner">
     <i class="fa fa-close close-search-control"></i>
@@ -117,8 +119,7 @@
       <p class="title">Suchbegriff eingeben</p>
       <div id="searchBox" class="box-search-inner">
         <div class="search-box-inner">
-          <div class="search-box-shadow-frame"><input type="search" autofocus="autofocus" class="search-input" autocomplete="off">
-            <button type="submit" class="search-submit">
+          <div class="search-box-shadow-frame"><item-search template="#vue-item-search"></item-search>
               <i class="fa fa-search sm-up"></i>
             </button>
           </div>
