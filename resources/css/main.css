@@ -1021,7 +1021,8 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .fa-shopping-cart:before {
-  content: "\f290" !important
+  font-family: icomoon;
+  content: "\e900" !important;
 }
 
 .wrapper-main .navbar {
