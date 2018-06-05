@@ -1,197 +1,287 @@
-{% set currentLang = services.sessionStorage.getLang() %}
-{% set homepageJson = getExternalContent("https://cdn02.plentymarkets.com/pmsbpnokwu6a/plugin/production/marketingresource/js/HomepageContent.json") %}
-{% set homepageData = homepageJson[currentLang] %}
-<div class="homePage">
-  <div id="carousel-example-generic" data-ride="carousel" class="carousel slide">
-    <div role="listbox" class="carousel-inner">
-      <div class="carousel-item">
-        <a href="/kombikinderwagen" class="hero-category"><img src="https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/pexels-photo-1007773.jpeg" alt="Slide 1" class="img-fluid"></a>
-        <div class="slide-caption slide-position7 design1 mobile-design2">
-          <div class="slide-text">
-            <h1>Kombikinderwagen</h1>
-            <p>Entdecken Sie unsere verschiedenen Kinderwagen</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <a href="/alles-fuer-ihr-kind" class="hero-category"><img src="https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/pexels-photo-208153__2_.jpeg" class="img-fluid"></a>
-        <div class="slide-caption slide-position7 design1 mobile-design2">
-          <div class="slide-text">
-            <h2>Alles für Ihr Kind</h2>
-            <p>Entdecken Sie unser Sortiment, vorbeischauen lohnt sich!</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item active">
-        <a href="/babyschaukel" class="hero-category"><img src="https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/pexels-photo-266004__1_.jpeg" class="img-fluid"></a>
-        <div class="slide-caption slide-position7 design1 mobile-design2">
-          <div class="slide-text">
-            <h2>Babyschaukeln</h2>
-            <p>Entdecken Sie unsere verschiedenen Babyschaukeln</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
-    </ol>
-    <a href="#carousel-example-generic" role="button" data-slide="prev" class="left carousel-control">
-      <span aria-hidden="true" class="icon-prev"></span>
-      <span class="sr-only">Zurück</span></a>
-    <a href="#carousel-example-generic" role="button" data-slide="next" class="right carousel-control">
-      <span aria-hidden="true" class="icon-next"></span>
-      <span class="sr-only">Nächste</span></a>
-  </div>
-  <div class="row">
-    <div class="col-md-4 banner-block col-sm-4 col-xs-12">
-      <div class="banner text-center banner-font-light hover-zoom">
-        <div class="banner-content">
-          <p>&nbsp;</p>
-          <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
-            <a href="https://www.hobea.de/stillkissen-in-verschieden-farben-von-hobea-germany/a-3884/" style="color:#fff">Stillkissen</a>
-          </h3>
-          <p>
-            <a href="https://www.hobea.de/stillkissen-in-verschieden-farben-von-hobea-germany/a-3884/" style="color:#fff">Perfekt zum Schlafen und Stillen</a>
-          </p>
-          <p>&nbsp;</p>
-        </div>
-        <a href="https://www.hobea.de/stillzubehoer/">
-          <img alt="Baby-Stillkissen" src="/images/gallery/pl_legenda/hobea-stillkissen-seitenschlaeferkissen.jpg">
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4 banner-block col-sm-4 col-xs-12">
-      <div class="banner text-center banner-font-light hover-zoom">
-        <div class="banner-content">
-          <p>&nbsp;</p>
-          <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
-            <a href="https://www.hobea.de/kinderschuhe/krabbelschuhe/" style="color:#fff">Baby + Kinder Krabbelschuhe</a>
-          </h3>
-          <p>
-            <a href="https://www.hobea.de/kinderschuhe/krabbelschuhe/" style="color:#fff">Niedliche Schuhe für Kinder</a>
-          </p>
-          <p>&nbsp;</p>
-        </div>
-        <a href="https://www.hobea.de/kinderschuhe/krabbelschuhe/">
-          <img alt="HOBEA Krabbelschuhe Leder" src="/images/gallery/pl_legenda/baby-krabbelschuhe-hobea.jpg">
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4 banner-block col-sm-4 col-xs-12">
-      <div class="banner text-center banner-font-light hover-zoom">
-        <div class="banner-content">
-          <p>&nbsp;</p>
-          <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
-            <a href="https://www.hobea.de/taufkleidung-und-festkleidung/" style="color:#fff">Taufkleider</a>
-          </h3>
-          <p>
-            <a href="https://www.hobea.de/taufkleidung-und-festkleidung/" style="color:#fff">Festliche Kindermode</a>
-          </p>
-          <p>&nbsp;</p>
-        </div>
-        <a href="https://www.hobea.de/taufkleidung-und-festkleidung/">
-          <img alt="Taufkleider-festlich" src="/images/gallery/pl_legenda/taufkleid-mädchen.jpg">
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 banner-block col-sm-4 col-xs-12">
-      <div class="banner text-center banner-font-light hover-zoom">
-        <div class="banner-content">
-          <p>&nbsp;</p>
-          <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
-            <a href="https://www.hobea.de/haengesessel-und-haengematten/" style="color:#fff">Hängesessel und Hängematten</a>
-          </h3>
-          <p>
-            <a href="https://www.hobea.de/haengesessel-und-haengematten/" style="color:#fff">der ideale Ort zum Entspannen &amp; Träumen</a>
-          </p>
-          <p>&nbsp;</p>
-        </div>
-        <a href="https://www.hobea.de/haengesessel-und-haengematten/">
-          <img alt="HOBEA Hängesessel Haus &amp; Garten" src="/images/gallery/pl_legenda/hobea-haengesessel-garten.jpg">
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4 banner-block col-sm-4 col-xs-12">
-      <div class="banner text-center banner-font-light hover-zoom">
-        <div class="banner-content">
-          <p>&nbsp;</p>
-          <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
-            <a href="https://www.hobea.de/einschlagdecken/" style="color:#fff">Einschlagdecke für die Babyschale</a>
-          </h3>
-          <p style="color: white; margin-top: 10px; text-shadow: 1px 1px 8px #000;">
-            <a href="https://www.hobea.de/einschlagdecken/" style="color:#fff">Praktische Maxi Cosi Decke für unterwegs
-              <br>Sommer und Winter-Ausführungen</a>
-          </p>
-          <p>&nbsp;</p>
-        </div>
-        <a href="https://www.hobea.de/einschlagdecken/">
-          <img src="/images/gallery/pl_legenda/einschlagdecke-maxi-cosi-hobea.jpg">
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4 banner-block col-sm-4 col-xs-12">
-      <div class="banner text-center banner-font-light hover-zoom">
-        <div class="banner-content">
-          <p>&nbsp;</p>
-          <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
-            <a href="https://www.hobea.de/kinderschuhe/janosch-krabbelschuhe/" style="color:#fff">Janosch Krabbelschuhe</a>
-          </h3>
-          <p style="color: white; margin-top: 10px; text-shadow: 1px 1px 8px #000;">
-            <a href="https://www.hobea.de/kinderschuhe/janosch-krabbelschuhe/" style="color:#fff">Janosch Krabbelschuhe von HOBEA-Germany machen Tigerente &amp; Co. zu treuen Begleitern für die ersten Schritte der Kleinsten.</a>
-          </p>
-          <p>&nbsp;</p>
-        </div>
-        <a href="https://www.hobea.de/kinderschuhe/janosch-krabbelschuhe/">
-          <img src="/images/gallery/pl_legenda/janosch-krabbelschuhe.jpg">
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="section-content">
-    <div class="container">
-      <div class="service-items row mobile-row">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="item-box">
-              <div class="icon-box-inner text-center">
-                <span class="icon-circled">
-                  <i class="fa fa-truck"></i>
-                </span>
-                <p class="icon-box-title text-uppercase">
-                  <strong>Versand</strong>
-                </p>
-                <p>Sie zahlen nur einmal die Versandkosten pro Sendung!</p>
-              </div>
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+
+{% set overrideHomepageContainer = "" %}
+{% for content in container("Ceres::Homepage")if content.plugin != "Plenty" %}
+  {% set overrideHomepageContainer = overrideHomepageContainer ~ content.result %}
+{% endfor %}
+{% if overrideHomepageContainer | trim is empty %}
+
+  {% set lang = services.sessionStorage.getLang() %}
+
+  {% set slider1 = {
+    item: services.itemLoader.loadForTemplate('Ceres::Homepage.Homepage', itemLoaderPresets.items, {
+      variationIds: [config("Ceres.homepage.sliderItemId1")]
+    }).documents[0].data,
+    url: config("Ceres.homepage.sliderImageUrl1")
+  } %}
+  {% set slider2 = {
+    item: services.itemLoader.loadForTemplate('Ceres::Homepage.Homepage', itemLoaderPresets.items, {
+      variationIds: [config("Ceres.homepage.sliderItemId2")]
+    }).documents[0].data,
+    url: config("Ceres.homepage.sliderImageUrl2")
+  } %}
+  {% set slider3 = {
+    item: services.itemLoader.loadForTemplate('Ceres::Homepage.Homepage', itemLoaderPresets.items, {
+      variationIds: [config("Ceres.homepage.sliderItemId3")]
+    }).documents[0].data,
+    url: config("Ceres.homepage.sliderImageUrl3")
+  } %}
+
+  {% if slider1.url | trim is empty and slider1.item.texts is not empty %}
+    {% set slider1Image = slider1.item.images | itemImages | orderByKey('position') | first %}
+    {% set slider1 = slider1 | merge({url: slider1Image.url}) %}
+  {% endif %}
+  {% if slider2.url | trim is empty and slider2.item.texts is not empty %}
+    {% set slider2Image = slider2.item.images | itemImages | orderByKey('position') | first %}
+    {% set slider2 = slider2 | merge({url: slider2Image.url}) %}
+  {% endif %}
+  {% if slider3.url | trim is empty and slider3.item.texts is not empty %}
+    {% set slider3Image = slider3.item.images | itemImages | orderByKey('position') | first %}
+    {% set slider3 = slider3 | merge({url: slider3Image.url}) %}
+  {% endif %}
+
+  {% set heroExtra1 = {
+    item: services.itemLoader.loadForTemplate('Ceres::Homepage.Homepage', itemLoaderPresets.items, {
+      variationIds: [config("Ceres.homepage.heroExtraItemId1")]
+    }).documents[0].data,
+    url: config("Ceres.homepage.heroExtraImageUrl1")
+  } %}
+  {% set heroExtra2 = {
+    item: services.itemLoader.loadForTemplate('Ceres::Homepage.Homepage', itemLoaderPresets.items, {
+      variationIds: [config("Ceres.homepage.heroExtraItemId2")]
+    }).documents[0].data,
+    url: config("Ceres.homepage.heroExtraImageUrl2")
+  } %}
+
+  {% if heroExtra1.url | trim is empty and heroExtra1.item.texts is not empty %}
+    {% set heroExtra1Image = heroExtra1.item.images | itemImages | orderByKey('position') | first %}
+    {% set heroExtra1 = heroExtra1 | merge({url: heroExtra1Image.url}) %}
+  {% endif %}
+  {% if heroExtra2.url | trim is empty and heroExtra2.item.texts is not empty %}
+    {% set heroExtra2Image = heroExtra2.item.images | itemImages | orderByKey('position') | first %}
+    {% set heroExtra2 = heroExtra2 | merge({url: heroExtra2Image.url}) %}
+  {% endif %}
+
+  {% set category1 = services.category.get(config("Ceres.homepage.homepageCategory1"), lang) %}
+  {% set category2 = services.category.get(config("Ceres.homepage.homepageCategory2"), lang) %}
+  {% set category3 = services.category.get(config("Ceres.homepage.homepageCategory3"), lang) %}
+  {% set category4 = services.category.get(config("Ceres.homepage.homepageCategory4"), lang) %}
+  {% set category5 = services.category.get(config("Ceres.homepage.homepageCategory5"), lang) %}
+  {% set category6 = services.category.get(config("Ceres.homepage.homepageCategory6"), lang) %}
+
+  {% set paginatedCategoryList1 = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {
+    'categoryId': category3.id,
+    'page': 1,
+    'items': 4,
+    'sorting': itemSort
+  }) %}
+
+  {% set paginatedCategoryList2 = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {
+    'categoryId': category6.id,
+    'page': 1,
+    'items': 4,
+    'sorting': itemSort
+  }) %}
+
+  {% set categoryList1 = paginatedCategoryList1.documents %}
+  {% set categoryList2 = paginatedCategoryList2.documents %}
+
+  {{ component( "Ceres::ItemList.Components.ItemList") }}
+  {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
+  {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
+
+  <div class="homePage">
+    <div id="carousel-example-generic" data-ride="carousel" class="carousel slide">
+      <div role="listbox" class="carousel-inner">
+        <div class="carousel-item">
+          <a href="/kombikinderwagen" class="hero-category"><img src="https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/pexels-photo-1007773.jpeg" alt="Slide 1" class="img-fluid"></a>
+          <div class="slide-caption slide-position7 design1 mobile-design2">
+            <div class="slide-text">
+              <h1>Kombikinderwagen</h1>
+              <p>Entdecken Sie unsere verschiedenen Kinderwagen</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="item-box">
-              <div class="icon-box-inner text-center">
-                <span class="icon-circled">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <p class="icon-box-title text-uppercase">
-                  <strong>Service</strong>
-                </p>
-                <p>Ihre Anfragen beantworten wir innerhalb von 24 Stunden</p>
-              </div>
+        </div>
+        <div class="carousel-item">
+          <a href="/alles-fuer-ihr-kind" class="hero-category"><img src="https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/pexels-photo-208153__2_.jpeg" class="img-fluid"></a>
+          <div class="slide-caption slide-position7 design1 mobile-design2">
+            <div class="slide-text">
+              <h2>Alles für Ihr Kind</h2>
+              <p>Entdecken Sie unser Sortiment, vorbeischauen lohnt sich!</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="item-box">
-              <div class="icon-box-inner text-center">
-                <span class="icon-circled">
-                  <i class="fa fa-star"></i>
-                </span>
-                <p class="icon-box-title text-uppercase">
-                  <strong>Qualität</strong>
-                </p>
-                <p>Wir versenden nur hochwertige, frische Qualitätsware</p>
-              </div>
+        </div>
+        <div class="carousel-item active">
+          <a href="/babyschaukel" class="hero-category"><img src="https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/pexels-photo-266004__1_.jpeg" class="img-fluid"></a>
+          <div class="slide-caption slide-position7 design1 mobile-design2">
+            <div class="slide-text">
+              <h2>Babyschaukeln</h2>
+              <p>Entdecken Sie unsere verschiedenen Babyschaukeln</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+      </ol>
+      <a href="#carousel-example-generic" role="button" data-slide="prev" class="left carousel-control">
+        <span aria-hidden="true" class="icon-prev"></span>
+        <span class="sr-only">Zurück</span></a>
+      <a href="#carousel-example-generic" role="button" data-slide="next" class="right carousel-control">
+        <span aria-hidden="true" class="icon-next"></span>
+        <span class="sr-only">Nächste</span></a>
+    </div>
+    <div class="row">
+      <div class="col-md-4 banner-block col-sm-4 col-xs-12">
+        <div class="banner text-center banner-font-light hover-zoom">
+          <div class="banner-content">
+            <p>&nbsp;</p>
+            <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">Kinderwagen</a>
+            </h3>
+            <p>
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">in verschiedenen Variationen!</a>
+            </p>
+            <p>&nbsp;</p>
+          </div>
+          <a href="https://www.ml-handel-shop.de/kombikinderwagen/">
+            <img alt="Kinderwagen M&L Handel" src="https://www.ml-handel-shop.de/item/images/250/370x450/Hauptbild-bearbeitet.jpg">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 banner-block col-sm-4 col-xs-12">
+        <div class="banner text-center banner-font-light hover-zoom">
+          <div class="banner-content">
+            <p>&nbsp;</p>
+            <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">Kinderwagen</a>
+            </h3>
+            <p>
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">in verschiedenen Variationen!</a>
+            </p>
+            <p>&nbsp;</p>
+          </div>
+          <a href="https://www.ml-handel-shop.de/kombikinderwagen/">
+            <img alt="Kinderwagen M&L Handel" src="https://www.ml-handel-shop.de/item/images/250/370x450/Hauptbild-bearbeitet.jpg">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 banner-block col-sm-4 col-xs-12">
+        <div class="banner text-center banner-font-light hover-zoom">
+          <div class="banner-content">
+            <p>&nbsp;</p>
+            <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">Kinderwagen</a>
+            </h3>
+            <p>
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">in verschiedenen Variationen!</a>
+            </p>
+            <p>&nbsp;</p>
+          </div>
+          <a href="https://www.ml-handel-shop.de/kombikinderwagen/">
+            <img alt="Kinderwagen M&L Handel" src="https://www.ml-handel-shop.de/item/images/250/370x450/Hauptbild-bearbeitet.jpg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 banner-block col-sm-4 col-xs-12">
+        <div class="banner text-center banner-font-light hover-zoom">
+          <div class="banner-content">
+            <p>&nbsp;</p>
+            <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">Kinderwagen</a>
+            </h3>
+            <p>
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">in verschiedenen Variationen!</a>
+            </p>
+            <p>&nbsp;</p>
+          </div>
+          <a href="https://www.ml-handel-shop.de/kombikinderwagen/">
+            <img alt="Kinderwagen M&L Handel" src="https://www.ml-handel-shop.de/item/images/250/370x450/Hauptbild-bearbeitet.jpg">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 banner-block col-sm-4 col-xs-12">
+        <div class="banner text-center banner-font-light hover-zoom">
+          <div class="banner-content">
+            <p>&nbsp;</p>
+            <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">Kinderwagen</a>
+            </h3>
+            <p>
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">in verschiedenen Variationen!</a>
+            </p>
+            <p>&nbsp;</p>
+          </div>
+          <a href="https://www.ml-handel-shop.de/kombikinderwagen/">
+            <img alt="Kinderwagen M&L Handel" src="https://www.ml-handel-shop.de/item/images/250/370x450/Hauptbild-bearbeitet.jpg">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 banner-block col-sm-4 col-xs-12">
+        <div class="banner text-center banner-font-light hover-zoom">
+          <div class="banner-content">
+            <p>&nbsp;</p>
+            <h3 style="margin: 80px 0 0 0; text-shadow: 1px 1px 8px #000;">
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">Kinderwagen</a>
+            </h3>
+            <p>
+              <a href="https://www.ml-handel-shop.de/kombikinderwagen/" style="color:#fff">in verschiedenen Variationen!</a>
+            </p>
+            <p>&nbsp;</p>
+          </div>
+          <a href="https://www.ml-handel-shop.de/kombikinderwagen/">
+            <img alt="Kinderwagen M&L Handel" src="https://www.ml-handel-shop.de/item/images/250/370x450/Hauptbild-bearbeitet.jpg">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="section-content">
+  <div class="container">
+    <div class="service-items row mobile-row">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="item-box">
+            <div class="icon-box-inner text-center">
+              <span class="icon-circled">
+                <i class="fa fa-truck"></i>
+              </span>
+              <p class="icon-box-title text-uppercase">
+                <strong>Versand</strong>
+              </p>
+              <p>Sie zahlen nur einmal die Versandkosten pro Sendung!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-box">
+            <div class="icon-box-inner text-center">
+              <span class="icon-circled">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              <p class="icon-box-title text-uppercase">
+                <strong>Service</strong>
+              </p>
+              <p>Ihre Anfragen beantworten wir innerhalb von 24 Stunden</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="item-box">
+            <div class="icon-box-inner text-center">
+              <span class="icon-circled">
+                <i class="fa fa-star"></i>
+              </span>
+              <p class="icon-box-title text-uppercase">
+                <strong>Qualität</strong>
+              </p>
+              <p>Wir versenden nur hochwertige, frische Qualitätsware</p>
             </div>
           </div>
         </div>
@@ -214,6 +304,127 @@
         </div>
       </div>
     </div>
+    {% set homepageContainer2 = LayoutContainer.show("Ceres::Homepage.Container2") %}
+    {% set homepageContainer3 = LayoutContainer.show("Ceres::Homepage.Container3") %}
+
+    {% set homepageContainer4 = LayoutContainer.show("Ceres::Homepage.Container4") %}
+    {% set homepageContainer5 = LayoutContainer.show("Ceres::Homepage.Container5") %}
+
+    {% set homepageContainer6 = LayoutContainer.show("Ceres::Homepage.Container6") %}
+    {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
+      <div class="m-b-2 clearfix">
+        {% if homepageContainer6 | trim is empty %}
+          <div class="section-header m-b-1">
+            <h2>Sale</h2>
+            <a href="{{ services.category.getURL(category3, lang) }}" class="section-link-all">
+              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              {{ trans("Ceres::Template.homepageShowAll") }}</a>
+          </div>
+          <ul class="product-list row grid">
+            {% for item in categoryList1 %}
+              <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
+                  'item' : item
+                } %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          {{ homepageContainer6 }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {#<!-- CATEGORIES -->#}
+    {% set homepageContainer7 = LayoutContainer.show("Ceres::Homepage.Container7") %}
+    {% set homepageContainer8 = LayoutContainer.show("Ceres::Homepage.Container8") %}
+    {% if category4.details is not empty or homepageContainer7 | trim is not empty or category5.details is not empty or homepageContainer8 | trim is not empty %}
+      <div class="row prop-row m-y-2 featured-categories">
+        {% if category4.details is not empty or homepageContainer7 | trim is not empty %}
+          <div class="col-xs-12 col-lg-{% if category5.details is not empty or homepageContainer8 | trim is not empty %}8{% else %}12{% endif %}">
+            <div class="prop-xs-6-4 prop-md-3-1 prop-lg-{% if category5.details is not empty or homepageContainer8 | trim is not empty %}2{% else %}3{% endif %}-1">
+              {% if homepageContainer7 | trim is empty %}
+                <div class="prop-inner">
+                  <a class="featured-category" href="{{ services.category.getURL(category4, lang) }}">
+                    {% if category4.details[0].imagePath %}
+                      <img src="/documents/{{ category4.details[0].imagePath }}" alt="{{ category4.details[0].name }}">
+                    {% endif %}
+                    <div class="featured-category-inner">
+                      <h2 class="featured-category-headline">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        {{ category4.details[0].name }}
+                      </h2>
+
+                    </div>
+                  </a>
+                </div>
+              {% else %}
+                {{ homepageContainer7 }}
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if category5.details is not empty or homepageContainer8 | trim is not empty %}
+          <div class="col-xs-12 col-lg-{% if category4.details is not empty or homepageContainer7 | trim is not empty %}4{% else %}12{% endif %}">
+            <div class="prop-xs-6-4 prop-md-3-1 prop-lg-{% if category4.details is not empty or homepageContainer7 | trim is not empty %}1{% else %}3{% endif %}-1">
+              {% if homepageContainer8 | trim is empty %}
+                <div class="prop-inner">
+                  <a class="featured-category" href="{{ services.category.getURL(category5, lang) }}">
+                    {% if category5.details[0].imagePath %}
+                      <img src="/documents/{{ category5.details[0].imagePath }}" alt="{{ category5.details[0].name }}">
+                    {% endif %}
+                    <div class="featured-category-inner">
+                      <h2 class="featured-category-headline">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        {{ category5.details[0].name }}
+                      </h2>
+                    </div>
+                  </a>
+                </div>
+              {% else %}
+                {{ homepageContainer8 }}
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <!-- END CATEGORIES -->
+
+    {% set homepageContainer9 = LayoutContainer.show("Ceres::Homepage.Container9") %}
+    {% if categoryList2 is not empty or homepageContainer9 | trim is not empty %}
+      <div class="m-b-2 clearfix">
+        {% if homepageContainer9 | trim is empty %}
+          <div class="section-header m-b-1">
+            <h2>{{ category6.details[0].name }}</h2>
+            <a href="{{ services.category.getURL(category6, lang) }}" class="section-link-all">
+              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              {{ trans("Ceres::Template.homepageShowAll") }}</a>
+          </div>
+          <!-- crosssell start -->
+          <ul class="product-list row grid">
+            {% for item in categoryList2 %}
+              <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
+                  'item' : item
+                } %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          {{ homepageContainer9 }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {{ LayoutContainer.show("Ceres::Homepage.Container10") }}
+
   </div>
+</div>
+{% else %}
+{{ overrideHomepageContainer | raw }}
+{% endif %}
 
 </div>
