@@ -80,11 +80,18 @@
                       <i aria-hidden="true" class="fa fa-shopping-cart"></i>
                       <span class="badge-right">0</span></span></a>
                 </li>
+                <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler hidden-lg-up" type="button">
+                     &#9776;
+                 </button>
+
                 <li id="btnMainMenuToggler" class="hidden-lg-up">
                   <i aria-hidden="true" class="fa fa-bars"></i>
                 </li>
               </ul>
               <div id="mainNavbarCollapsable">
+                <ul class="breadcrumb">
+                  <li class="btnClose"></li>
+              </ul>
 
                 <ul class="mainmenu">
                   {{ Tree.get_nav_bar(categories, "") }}
@@ -120,7 +127,7 @@
       <div id="searchBox" class="box-search-inner">
         <div class="search-box-inner">
           <div class="search-box-shadow-frame"><item-search template="#vue-item-search"></item-search>
-              <i class="fa fa-search sm-up"></i>
+
             </button>
           </div>
         </div>
