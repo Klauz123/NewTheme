@@ -1,214 +1,135 @@
-
-<div class="cmp cmp-hero">
-  <div class="hero-main">
-    <div id="carousel-example-generic" data-ride="carousel" class="carousel slide">
-      <div role="listbox" class="carousel-inner">
-        <div class="carousel-item active">
-          <a href="/innenleuchten/tischleuchten/bankers-lamp-bankerslamp-bankierslampe-jack-green-10122_11622558_1121" class="hero-category"><img src="/images/gallery/Startseite-Slider/kategoriename_kat1.jpg" alt="Bankerslamp Jack" class="img-fluid">
-            <div class="carousel-caption">
-              <h1>
-                <i aria-hidden="true" class="fa fa-angle-double-right"></i>
-                Bankerslamp Jack</h1>
-            </div>
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="/aussenleuchten/kugelleuchten" class="hero-category"><img src="/images/gallery/Startseite-Slider/kategorienameB_kat1.jpg" alt="Kugelleuchten für Außen" class="img-fluid">
-            <div class="carousel-caption">
-              <h1>
-                <i aria-hidden="true" class="fa fa-angle-double-right"></i>
-                Kugelleuchten für Außen</h1>
-            </div>
-          </a>
-        </div>
-        <div class="carousel-item">
-          <a href="/brunnen/gartenbrunnen" class="hero-category"><img src="/documents/category/101/Brunnen-kat1.jpg" alt="Gartenbrunnen" class="img-fluid">
-            <div class="carousel-caption">
-              <h1>
-                <i aria-hidden="true" class="fa fa-angle-double-right"></i>
-                Gartenbrunnen</h1>
-            </div>
-          </a>
+{% set currentLang = services.sessionStorage.getLang() %}
+{% set homepageJson = getExternalContent("https://cdn02.plentymarkets.com/pmsbpnokwu6a/plugin/production/marketingresource/js/HomepageContent.json") %}
+{% set homepageData = homepageJson[currentLang] %}
+<div class="homePage">
+  <div id="carousel-example-generic" data-ride="carousel" class="carousel slide">
+    <div role="listbox" class="carousel-inner">
+      <div class="carousel-item">
+        <a href="/kombikinderwagen" class="hero-category"><img src="https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/pexels-photo-1007775__1_.jpeg" alt="Slide 1" class="img-fluid"></a>
+        <div class="slide-caption slide-position7 design1 mobile-design2">
+          <div class="slide-text">
+            <h1>Kombikinderwagen</h1>
+            <p>Entdecken Sie unsere verschiedenen Kinderwagen</p>
+          </div>
         </div>
       </div>
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-      </ol>
-      <a href="#carousel-example-generic" role="button" data-slide="prev" class="left carousel-control">
-        <span aria-hidden="true" class="icon-prev"></span>
-        <span class="sr-only">Zurück</span></a>
-      <a href="#carousel-example-generic" role="button" data-slide="next" class="right carousel-control">
-        <span aria-hidden="true" class="icon-next"></span>
-        <span class="sr-only">Nächste</span></a>
+      <div class="carousel-item">
+        <a href="/alles-fuer-ihr-kind" class="hero-category"><img src="https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/pexels-photo-208153.jpeg" class="img-fluid"></a>
+        <div class="slide-caption slide-position7 design1 mobile-design2">
+          <div class="slide-text">
+            <h2>Alles für Ihr Kind</h2>
+            <p>Entdecken Sie unser Sortiment, vorbeischauen lohnt sich!</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <a href="/babyschaukel" class="hero-category"><img src="https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/pexels-photo-266004.jpeg" class="img-fluid"></a>
+        <div class="slide-caption slide-position7 design1 mobile-design2">
+          <div class="slide-text">
+            <h2>Babyschaukeln</h2>
+            <p>Entdecken Sie unsere verschiedenen Babyschaukeln</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+    </ol>
+    <a href="#carousel-example-generic" role="button" data-slide="prev" class="left carousel-control">
+      <span aria-hidden="true" class="icon-prev"></span>
+      <span class="sr-only">Zurück</span></a>
+    <a href="#carousel-example-generic" role="button" data-slide="next" class="right carousel-control">
+      <span aria-hidden="true" class="icon-next"></span>
+      <span class="sr-only">Nächste</span></a>
+  </div>
+  <div class="row">
+    <div class="row mt-xs-0_5">
+      <ul class="flex-container" id="recommended-plugins">
+        {% for plugin in homepageData.recommended | shuffle %}
+          <li class="flex-item">
+            <a rel="noopener noreferrer" target="_blank" href="{{ plugin.pluginLink }}">
+              <img class="flex-image" src="{{ plugin.pluginIcon }}"/>
+              <div class="flex-align-bottom">
+                <h1 class="flex-title">
+                  {% autoescape false %}{{ plugin.pluginTitle }}
+                  {% endautoescape %}
+                </h1>
+                <div class="flex-text">
+                  {% autoescape false %}{{ plugin.pluginText }}
+                  {% endautoescape %}
+                </div>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
-  <div class="hero-xtras">
-    <a href="/innenleuchten/deckenleuchten" class="hero-category"><img src="/documents/category/21/Deckenleuchten-kat1.jpg" alt="Deckenleuchten" class="img-fluid">
-      <div class="hero-category-inner">
-        <h2 class="hero-category-headline">
-          <i aria-hidden="true" class="fa fa-angle-double-right"></i>
-          Deckenleuchten
-        </h2>
+  <div class="section-content">
+    <div class="container">
+      <div class="service-items row mobile-row">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="item-box">
+              <div class="icon-box-inner text-center">
+                <span class="icon-circled">
+                  <i class="fa fa-truck"></i>
+                </span>
+                <p class="icon-box-title text-uppercase">
+                  <strong>Versand</strong>
+                </p>
+                <p>Sie zahlen nur einmal die Versandkosten pro Sendung!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="item-box">
+              <div class="icon-box-inner text-center">
+                <span class="icon-circled">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <p class="icon-box-title text-uppercase">
+                  <strong>Service</strong>
+                </p>
+                <p>Ihre Anfragen beantworten wir innerhalb von 24 Stunden</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="item-box">
+              <div class="icon-box-inner text-center">
+                <span class="icon-circled">
+                  <i class="fa fa-star"></i>
+                </span>
+                <p class="icon-box-title text-uppercase">
+                  <strong>Qualität</strong>
+                </p>
+                <p>Wir versenden nur hochwertige, frische Qualitätsware</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </a>
-    <a href="/innenleuchten/pendelleuchten" class="hero-category"><img src="/documents/category/26/Pendelleuchten-kat1.jpg" alt="Pendelleuchten" class="img-fluid">
-      <div class="hero-category-inner">
-        <h2 class="hero-category-headline">
-          <i aria-hidden="true" class="fa fa-angle-double-right"></i>
-          Pendelleuchten
-        </h2>
-      </div>
-    </a>
+    </div>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="seotext text-center">
+          <div class="titel">
+            <h2 class="titel">Kinderwagen von M&L Handel</h2>
+          </div>
+          <p>Alles für Ihr Kind - vom Kinderwagen, über Kinderspielzeug, Babyschaukeln und Kinderdreirädern bieten wir Ihnen verschiedene interessante Artikel zum Thema Kind und Kinderwagen.</p>
+          <p>M&L-Handel bietet Ihnen Kinderwagen und Kinderwagen-Zubebör in den verschiedensten Ausführungen</p>
+
+          <p>Unser Ziel ist es, Ihnen preiswerte und qualitativ hochwertige Produkte rund um das Thema Kinderwagen und Erstausstattung für Ihr Kind anzubieten. Die Zufriedenheit unserer Kunden ist uns sehr wichtig, denn wir möchten, dass unsere Kunden wieder
+            kommen und nicht unsere Produkte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
-<!-- Full Page Image Background Carousel Header -->
-  <div id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b8373cb58adea53aadfafc395e52c9cd&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="carousel-caption">
-                     <h2 class="animated fadeInLeft">Alles fürs Kind</h2>
-                     <p class="animated fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                     <p class="animated fadeInUp"><a href="#" class="btn btn-transparent btn-rounded btn-large">jetzt einkaufen</a></p>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1493390114000/photosp/d584c486-56c3-4e53-9f1c-e29d9aa07a53/stock-photo-dad-daddy-stroller-daddy-and-son-d584c486-56c3-4e53-9f1c-e29d9aa07a53.jpg');"></div>
-                <div class="carousel-caption">
-                     <h2 class="animated fadeInDown">Kinderwagen</h2>
-                     <p class="animated fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                     <p class="animated fadeInUp"><a href="#" class="btn btn-transparent btn-rounded btn-large">jetzt einkaufen</a></p>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1445573162000/photosp/9e02a883-f943-4c8a-8f3c-76f82c1173a5/stock-photo-pink-bedroom-interior-baby-room-pastel-nursery-baby-girl-9e02a883-f943-4c8a-8f3c-76f82c1173a5.jpg');"></div>
-                <div class="carousel-caption">
-                     <h2 class="animated fadeInRight">Kinderbetten</h2>
-                     <p class="animated fadeInRight">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                     <p class="animated fadeInRight"><a href="#" class="btn btn-transparent btn-rounded btn-large">Jetzt einkaufen</a></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-
-    </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="h3 tile-title">
-        <a href="/kindersitze/">Kindersitze</a>
-      </div>
-      <a href="/kindersitze/"><img alt="" class="tile-image" src="https://assets.babymarkt.com/out/bmResponsive/img/RDX-kw10-kindersitze.jpg"></a>
-      <div class="tile-text closed js-show-more-content">
-
-        Sichere Fahrt auf großen Abenteuern - mit hochwertiger Babyschale, mitwachsendem Kindersitz oder Reboarder. Unser Berater hilft dir bei der Auswahl und unser Sicherheitsversprechen garantiert kostenlosen Ersatz im Schadensfall. Gute Fahrt!
-        <a class="tile-more js-show-more" data-alt="< weniger" href="#">mehr &gt;</a></div></div>
-
-      </div>
-    </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="h3 tile-title">
-        <a href="/kindersitze/">Kindersitze</a>
-      </div>
-      <a href="/kindersitze/"><img alt="" class="tile-image" src="https://assets.babymarkt.com/out/bmResponsive/img/RDX-kw10-kindersitze.jpg"></a>
-      <div class="tile-text closed js-show-more-content">
-
-        Sichere Fahrt auf großen Abenteuern - mit hochwertiger Babyschale, mitwachsendem Kindersitz oder Reboarder. Unser Berater hilft dir bei der Auswahl und unser Sicherheitsversprechen garantiert kostenlosen Ersatz im Schadensfall. Gute Fahrt!
-        <a class="tile-more js-show-more" data-alt="< weniger" href="#">mehr &gt;</a></div></div>
-
-      </div>
-    </div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="h3 tile-title">
-        <a href="/kindersitze/">Kindersitze</a>
-      </div>
-      <a href="/kindersitze/"><img alt="" class="tile-image" src="https://assets.babymarkt.com/out/bmResponsive/img/RDX-kw10-kindersitze.jpg"></a>
-      <div class="tile-text closed js-show-more-content">
-
-        Sichere Fahrt auf großen Abenteuern - mit hochwertiger Babyschale, mitwachsendem Kindersitz oder Reboarder. Unser Berater hilft dir bei der Auswahl und unser Sicherheitsversprechen garantiert kostenlosen Ersatz im Schadensfall. Gute Fahrt!
-        <a class="tile-more js-show-more" data-alt="< weniger" href="#">mehr &gt;</a></div></div>
-
-      </div>
-    </div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="h3 tile-title">
-        <a href="/kindersitze/">Kindersitze</a>
-      </div>
-      <a href="/kindersitze/"><img alt="" class="tile-image" src="https://assets.babymarkt.com/out/bmResponsive/img/RDX-kw10-kindersitze.jpg"></a>
-      <div class="tile-text closed js-show-more-content">
-
-        Sichere Fahrt auf großen Abenteuern - mit hochwertiger Babyschale, mitwachsendem Kindersitz oder Reboarder. Unser Berater hilft dir bei der Auswahl und unser Sicherheitsversprechen garantiert kostenlosen Ersatz im Schadensfall. Gute Fahrt!
-        <a class="tile-more js-show-more" data-alt="< weniger" href="#">mehr &gt;</a></div></div>
-
-      </div>
-    </div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="h3 tile-title">
-        <a href="/kindersitze/">Kindersitze</a>
-      </div>
-      <a href="/kindersitze/"><img alt="" class="tile-image" src="https://assets.babymarkt.com/out/bmResponsive/img/RDX-kw10-kindersitze.jpg"></a>
-      <div class="tile-text closed js-show-more-content">
-
-        Sichere Fahrt auf großen Abenteuern - mit hochwertiger Babyschale, mitwachsendem Kindersitz oder Reboarder. Unser Berater hilft dir bei der Auswahl und unser Sicherheitsversprechen garantiert kostenlosen Ersatz im Schadensfall. Gute Fahrt!
-        <a class="tile-more js-show-more" data-alt="< weniger" href="#">mehr &gt;</a></div></div>
-
-      </div>
-    </div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="h3 tile-title">
-        <a href="/kindersitze/">Kindersitze</a>
-      </div>
-      <a href="/kindersitze/"><img alt="" class="tile-image" src="https://assets.babymarkt.com/out/bmResponsive/img/RDX-kw10-kindersitze.jpg"></a>
-      <div class="tile-text closed js-show-more-content">
-
-        Sichere Fahrt auf großen Abenteuern - mit hochwertiger Babyschale, mitwachsendem Kindersitz oder Reboarder. Unser Berater hilft dir bei der Auswahl und unser Sicherheitsversprechen garantiert kostenlosen Ersatz im Schadensfall. Gute Fahrt!
-        <a class="tile-more js-show-more" data-alt="< weniger" href="#">mehr &gt;</a></div></div>
-
-      </div>
-    </div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="h3 tile-title">
-        <a href="/kindersitze/">Kindersitze</a>
-      </div>
-      <a href="/kindersitze/"><img alt="" class="tile-image" src="https://assets.babymarkt.com/out/bmResponsive/img/RDX-kw10-kindersitze.jpg"></a>
-      <div class="tile-text closed js-show-more-content">
-
-        Sichere Fahrt auf großen Abenteuern - mit hochwertiger Babyschale, mitwachsendem Kindersitz oder Reboarder. Unser Berater hilft dir bei der Auswahl und unser Sicherheitsversprechen garantiert kostenlosen Ersatz im Schadensfall. Gute Fahrt!
-        <a class="tile-more js-show-more" data-alt="< weniger" href="#">mehr &gt;</a></div></div>
-
-      </div>
-    </div>
