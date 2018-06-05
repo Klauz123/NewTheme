@@ -85,8 +85,9 @@
                 </li>
               </ul>
               <div id="mainNavbarCollapsable">
-                {{ Tree.get_nav_bar(categories, "") }}
+
                 <ul class="mainmenu">
+                  {{ Tree.get_nav_bar(categories, "") }}
                 </ul>
               </div>
             </nav>
@@ -126,47 +127,42 @@
     </div>
   </div>
 </div>
-<div country-flag-prefix="flag-icon-">
-  <div id="countrySettings" class="row cmp cmp-country-settings no-margin collapse">
-    <div class="container">
-      <div class="row no-padding">
-        <div class="country-settings-inner languages col-lg-6">
-          <div class="language-settings">
-            <div class="list-title">
-              <strong>Sprache</strong><hr></div>
-            <ul>
-              <li class="active">
-                <a href="https://www.myfoodful.de/de" data-update-url="">
-                  <i class="flag-icon flag-icon-de"></i>Deutsch</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="country-settings-inner countries col-lg-6">
-          <div class="shipping-settings">
-            <div class="list-title">
-              <strong>Lieferland</strong><hr></div>
-            <ul>
-              <div>
-                <li class="active">
-                  <a data-toggle="collapse" href="#countrySettings" data-placement="top" class="" data-title="" data-original-title="">
-                    <i class="flag-icon flag-icon-de"></i>
-                    Deutschland
-                  </a>
-                </li>
-              </div>
-              <div>
-                <li class="">
-                  <a data-toggle="collapse" href="#countrySettings" data-placement="top" class="" data-title="" data-original-title="">
-                    <i class="flag-icon flag-icon-at"></i>
-                    Österreich
-                  </a>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<shop-country-settings country-flag-prefix="flag-icon-" :localization-data="{{ services.localization.getLocalizationData() | json_encode }}">
+           <div id="countrySettings" class="row cmp cmp-country-settings no-margin collapse">
+               <div class="container-max">
+                   <div class="row no-padding">
+                       <div class="country-settings-inner languages col-lg-6">
+
+                           <div class="language-settings">
+                               <div class="list-title">
+                                   <strong>{{ trans("Ceres::Template.headerSelectLanguage") }}</strong>
+                                   <hr>
+                               </div>
+
+                               {% set languageList = services.webstoreConfig.getActiveLanguageList() %}
+                               {% set languageUrls = services.url.getLanguageURLs() %}
+                               <ul>
+                                   {% for language in languageList %}
+                                       <li{% if lang == language %} class="active"{% endif %}>
+                                           <a href="{% if languageUrls[language] is defined %}{{ languageUrls[language] ~ queryString() }}{% else %}/{{ language }}{{ urls.trailingSlashSuffix }}{% endif %}" data-update-url>
+                                               <i class="flag-icon flag-icon-{{ language }}"></i>
+                                               {{ trans("Ceres::Template.header" ~ language | capitalize) }}
+                                           </a>
+                                       </li>
+                                   {% endfor %}
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="country-settings-inner countries col-lg-6">
+                           <div class="shipping-settings">
+                               <div class="list-title">
+                                   <strong>{{ trans("Ceres::Template.headerSelectShippingCountry") }}</strong>
+                                   <hr>
+                               </div>
+                               <shipping-country-select :disable-input="{{ services.template.isCheckout() | json_encode() }}"></shipping-country-select>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </shop-country-settings>
