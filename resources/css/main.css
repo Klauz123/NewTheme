@@ -88,8 +88,8 @@ body > #vue-app, body > #vue-error{
   background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/klarna.png')
 }
 
-.pay160614 li.sofort {
-  background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/sofort.png')
+.pay160614 li.vorkasse {
+  background-image: url('https://www.ml-handel-shop.de/layout/ueberweisung.png')
 }
 
 .pay160614 li.mastercard {
