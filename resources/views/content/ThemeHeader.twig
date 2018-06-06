@@ -28,25 +28,17 @@
               <li class="hidden-xs">
                 <a href="/contact" title="Kontakt">Kontakt</a>
               </li>
-              <li class="list-inline-item control-usmer">
-                <div id="login-change">
-                  <!---->
-                  <div>
-                    <a data-toggle="modal" href="#login">
-                      <i aria-hidden="true" class="fa fa-user"></i>
-                      <span class="hidden-xs-down">Anmelden</span></a>
-                    <span class="pipe"></span>
-                    <a data-toggle="modal" href="#registration">
-                      <i aria-hidden="true" class="fa fa-user-plus"></i>
-                      <span class="hidden-xs-down">Registrieren</span></a>
-                  </div>
-                </div>
+              <li class="list-inline-item control-user">
+                <user-login-handler template="#vue-user-login-handler"
+                                                  :user-data="{{ services.customer.getContact() | json_encode() }}"></user-login-handler>
               </li>
               <li class="list-inline-item dropdown control-languages">
-                <a data-toggle="collapse" href="#countrySettings" aria-expanded="false" aria-controls="countrySettings" data-parent="#controlsList">
-                  <i class="flag-icon flag-icon-de"></i>
-                </a>
-              </li>
+                             <a class="" data-toggle="collapse" href="#countrySettings" aria-expanded="false"
+                                aria-controls="countrySettings"
+                                data-parent="#controlsList">
+                                 <i class="flag-icon flag-icon-{{ lang }}"></i>
+                             </a>
+                         </li>
             </ul>
           </div>
         </div>
