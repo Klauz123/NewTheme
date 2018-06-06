@@ -77,7 +77,10 @@
 
                          {% endif %}
                 </li>
-                <li class="list-inline-item control-basket">
+                <li class="search icon-search">
+                 <i class="fa fa-search"></i>
+               </li>
+                <li class="basket">
                              <a v-toggle-basket-preview href="#" class="toggle-basket-preview">
                                  {% if config("Ceres.header.basket_values") != "sum" %}
                                      <span class="badge-right" v-basket-item-quantity="this.$store.state.basket.data.itemQuantity">0</span>
