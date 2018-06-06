@@ -66,8 +66,6 @@
             </ul>
           </div>
 
-
-
         </div>
 
         <div class="col-sm-6 col-md-4">
@@ -77,7 +75,7 @@
               <a href=" ">Zertifiziert</a>
             </li>
             <li>
-              <a href="">Geld-Zurück-Garantie</a>
+              <a href=" ">Geld-Zurück-Garantie</a>
             </li>
             <li>
               <a href="/zahlung">Kauf auf Rechnung möglich</a>
@@ -86,49 +84,48 @@
           <a class="trust160701" href=""></a>
         </div>
 
-
-
-          <div class="col-sm-9 margin-top">* Preise inkl. MwSt. zzgl. Versand</div>
-        </div>
-
+        <div class="col-sm-9 margin-top">* Preise inkl. MwSt. zzgl. Versand</div>
       </div>
-    </div>
-    {% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
-    <div class="copyright text-xs-center m-y-1">
-        <div class="static-link-list">
-            {% autoescape false %}
-                <a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a>
-                {% if config("Ceres.footer.cancellation_use_pdf") == "true" %}
-                    <a href="{{ config('Ceres.footer.cancellation_pdf_path') }}" target="_blank">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
-                {% else %}
-                    <a href="{{ urls.cancellationForm }}">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
-                {% endif %}
-                <a href="{{ urls.legalDisclosure }}">{{ trans("Ceres::Template.footerLegalDisclosure") }}</a>
-                <a href="{{ urls.privacyPolicy }}">{{ trans("Ceres::Template.footerPrivacyPolicy", {"hyphen": "&shy;"}) }}</a>
-                <a href="{{ urls.gtc }}">{{ trans("Ceres::Template.footerGtc") }}</a>
-                {% if config("Ceres.contact.shop_mail") | length > 0 and config("Ceres.contact.shop_mail") != "your@email.com" %}
-                    <a href="{{ urls.contact }}">{{ trans("Ceres::Template.footerContact") }}</a>
-                {% endif %}
-            {% endautoescape %}
-        </div>
-        </a>
-        <br>
-        <small>&copy; Copyright {{ "now" | date("Y") }} | {{ trans("Ceres::Template.footerAllRightsReserved") }}</small>
-    </div>
 
-    <div class="postfooter">
-      <div class="container">
-        <div class="col-sm-8 socials160613">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-youtube"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        </div>
-        <div class="col-sm-4 text-right" style="font-weight:bold;">
-          #ausliebe
-        </div>
-      </div>
     </div>
   </div>
+  {% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
+  <div class="copyright text-xs-center m-y-1">
+    <div class="static-link-list">
+      {% autoescape false %}
+        <a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a>
+        {% if config("Ceres.footer.cancellation_use_pdf") == "true" %}
+          <a href="{{ config('Ceres.footer.cancellation_pdf_path') }}" target="_blank">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
+        {% else %}
+          <a href="{{ urls.cancellationForm }}">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
+        {% endif %}
+        <a href="{{ urls.legalDisclosure }}">{{ trans("Ceres::Template.footerLegalDisclosure") }}</a>
+        <a href="{{ urls.privacyPolicy }}">{{ trans("Ceres::Template.footerPrivacyPolicy", {"hyphen": "&shy;"}) }}</a>
+        <a href="{{ urls.gtc }}">{{ trans("Ceres::Template.footerGtc") }}</a>
+        {% if config("Ceres.contact.shop_mail") | length > 0 and config("Ceres.contact.shop_mail") != "your@email.com" %}
+          <a href="{{ urls.contact }}">{{ trans("Ceres::Template.footerContact") }}</a>
+        {% endif %}
+      {% endautoescape %}
+    </div>
+  </a>
+  <br>
+  <small>&copy; Copyright
+    {{ "now" | date("Y") }}
+    |
+    {{ trans("Ceres::Template.footerAllRightsReserved") }}</small>
+</div>
 
+<div class="postfooter">
+  <div class="container">
+    <div class="col-sm-8 socials160613">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-youtube"></a>
+      <a href="#" class="fa fa-instagram"></a>
+    </div>
+    <div class="col-sm-4 text-right" style="font-weight:bold;">
+      #ausliebe
+    </div>
+  </div>
+</div>
 </div>
