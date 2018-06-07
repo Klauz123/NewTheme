@@ -3421,6 +3421,37 @@ ul.ul-list span {
   margin: 0
 }
 
+
+/*Product header*/
+product-header {
+    padding: 20px 0px 10px 0px;
+    padding: 1.25rem 0rem 0.625rem 0rem;
+    border-bottom: 1px solid #e4e3df;
+    text-decoration: none !important;
+}
+product-header::before {
+    right: 0.5em;
+    margin-left: -50%;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    border-top: 2px dashed #e86087;
+}
+product-header::before {
+    right: 0.5em;
+    margin-left: -50%;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    border-top: 2px dashed #e86087;
+}
+
 /*Service Box*/
 .item-box .icon-box-inner .toy-image {
     bottom: 15px;
@@ -3461,3 +3492,258 @@ ul.ul-list span {
     background-size: contain;
     transition: all 2s;
 }
+
+#serviceboxDIV_1 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(80, 80, 80);
+    height: 310px;
+    left: 0px;
+    max-width: 1134px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(80, 80, 80);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 1034px;
+    z-index: 1501;
+    column-rule-color: rgb(80, 80, 80);
+    perspective-origin: 517px 155px;
+    transform-origin: 517px 155px;
+    caret-color: rgb(80, 80, 80);
+    border: 0px none rgb(80, 80, 80);
+    font: normal normal 700 normal 14px / normal Handlee, cursive;
+    list-style: none outside none;
+    outline: rgb(80, 80, 80) none 0px;
+    padding: 60px 0px 0px;
+}/*#serviceboxDIV_1*/
+
+#serviceboxDIV_1:after {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(80, 80, 80);
+    content: '""';
+    display: table;
+    height: 0px;
+    text-decoration: none solid rgb(80, 80, 80);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    width: 0px;
+    column-rule-color: rgb(80, 80, 80);
+    perspective-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    caret-color: rgb(80, 80, 80);
+    border: 0px none rgb(80, 80, 80);
+    font: normal normal 700 normal 14px / 0px Handlee, cursive;
+    list-style: none outside none;
+    outline: rgb(80, 80, 80) none 0px;
+}/*#serviceboxDIV_1:after*/
+
+#serviceboxDIV_2 {
+    box-sizing: border-box;
+    color: rgb(80, 80, 80);
+    float: left;
+    height: 220px;
+    text-decoration: none solid rgb(80, 80, 80);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    width: 279.172px;
+    column-rule-color: rgb(80, 80, 80);
+    perspective-origin: 139.578px 110px;
+    transform-origin: 139.578px 110px;
+    caret-color: rgb(80, 80, 80);
+    background: rgb(124, 194, 220) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(80, 80, 80);
+    font: normal normal 700 normal 14px / normal Handlee, cursive;
+    list-style: none outside none;
+    margin: 0px 0px 30px 60px;
+    outline: rgb(80, 80, 80) none 0px;
+}/*#serviceboxDIV_2*/
+
+#serviceboxDIV_3, #serviceboxDIV_8, #serviceboxDIV_13 {
+    bottom: -35px;
+    box-sizing: border-box;
+    color: rgb(80, 80, 80);
+    height: 20px;
+    left: -45px;
+    max-width: 80px;
+    position: relative;
+    right: 45px;
+    text-decoration: none solid rgb(80, 80, 80);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    top: 35px;
+    width: 80px;
+    column-rule-color: rgb(80, 80, 80);
+    perspective-origin: 40px 10px;
+    transform-origin: 40px 10px;
+    caret-color: rgb(80, 80, 80);
+    background: rgb(201, 235, 244) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(80, 80, 80);
+    font: normal normal 700 normal 14px / normal Handlee, cursive;
+    list-style: none outside none;
+    outline: rgb(80, 80, 80) none 0px;
+}/*#serviceboxDIV_3, #serviceboxDIV_8, #serviceboxDIV_13*/
+
+#serviceboxH2_4, #serviceboxH2_9, #serviceboxH2_14 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    height: 36px;
+    text-align: center;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    width: 279.172px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 139.578px 18px;
+    transform-origin: 139.578px 18px;
+    caret-color: rgb(255, 255, 255);
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 700 normal 21px / 26px Handlee, cursive;
+    list-style: none outside none;
+    margin: 28px 0px 10px;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 0px 10px 10px;
+}/*#serviceboxH2_4, #serviceboxH2_9, #serviceboxH2_14*/
+
+#serviceboxH3_5, #serviceboxH3_10, #serviceboxH3_15 {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    height: 62px;
+    text-align: center;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    width: 279.172px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 139.578px 31px;
+    transform-origin: 139.578px 31px;
+    caret-color: rgb(255, 255, 255);
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 700 normal 18px / 26px Handlee, cursive;
+    list-style: none outside none;
+    margin: 0px;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 0px 10px 10px;
+}/*#serviceboxH3_5, #serviceboxH3_10, #serviceboxH3_15*/
+
+#serviceboxDIV_6 {
+    bottom: 15px;
+    box-sizing: border-box;
+    color: rgb(80, 80, 80);
+    height: 100px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(80, 80, 80);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    top: -15px;
+    width: 279.172px;
+    column-rule-color: rgb(80, 80, 80);
+    perspective-origin: 139.578px 50px;
+    transform-origin: 139.578px 50px;
+    caret-color: rgb(80, 80, 80);
+    background: rgba(0, 0, 0, 0) url("https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/toy.png") no-repeat scroll 0% 0% / contain padding-box border-box;
+    border: 0px none rgb(80, 80, 80);
+    font: normal normal 700 normal 14px / normal Handlee, cursive;
+    list-style: none outside none;
+    margin: 0px 0px 0px -40px;
+    outline: rgb(80, 80, 80) none 0px;
+    transition: all 2s ease 0s;
+}/*#serviceboxDIV_6*/
+
+#serviceboxDIV_7 {
+    box-sizing: border-box;
+    color: rgb(80, 80, 80);
+    float: left;
+    height: 220px;
+    text-decoration: none solid rgb(80, 80, 80);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    width: 279.172px;
+    column-rule-color: rgb(80, 80, 80);
+    perspective-origin: 139.578px 110px;
+    transform-origin: 139.578px 110px;
+    caret-color: rgb(80, 80, 80);
+    background: rgb(101, 110, 113) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(80, 80, 80);
+    font: normal normal 700 normal 14px / normal Handlee, cursive;
+    list-style: none outside none;
+    margin: 0px 0px 30px 60px;
+    outline: rgb(80, 80, 80) none 0px;
+}/*#serviceboxDIV_7*/
+
+#serviceboxDIV_11 {
+    bottom: 15px;
+    box-sizing: border-box;
+    color: rgb(80, 80, 80);
+    height: 105px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(80, 80, 80);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    top: -15px;
+    width: 279.172px;
+    column-rule-color: rgb(80, 80, 80);
+    perspective-origin: 139.578px 52.5px;
+    transform-origin: 139.578px 52.5px;
+    caret-color: rgb(80, 80, 80);
+    background: rgba(0, 0, 0, 0) url("https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/baby.png") no-repeat scroll 0% 0% / contain padding-box border-box;
+    border: 0px none rgb(80, 80, 80);
+    font: normal normal 700 normal 14px / normal Handlee, cursive;
+    list-style: none outside none;
+    margin: 0px 0px 0px -40px;
+    outline: rgb(80, 80, 80) none 0px;
+    transition: all 2s ease 0s;
+}/*#serviceboxDIV_11*/
+
+#serviceboxDIV_12 {
+    box-sizing: border-box;
+    color: rgb(80, 80, 80);
+    float: left;
+    height: 220px;
+    text-decoration: none solid rgb(80, 80, 80);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    width: 279.172px;
+    column-rule-color: rgb(80, 80, 80);
+    perspective-origin: 139.578px 110px;
+    transform-origin: 139.578px 110px;
+    caret-color: rgb(80, 80, 80);
+    background: rgb(241, 121, 157) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(80, 80, 80);
+    font: normal normal 700 normal 14px / normal Handlee, cursive;
+    list-style: none outside none;
+    margin: 0px 0px 30px 60px;
+    outline: rgb(80, 80, 80) none 0px;
+}/*#serviceboxDIV_12*/
+
+#serviceboxDIV_16 {
+    bottom: 15px;
+    box-sizing: border-box;
+    color: rgb(80, 80, 80);
+    height: 100px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(80, 80, 80);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    top: -15px;
+    width: 279.172px;
+    column-rule-color: rgb(80, 80, 80);
+    perspective-origin: 139.578px 50px;
+    transform-origin: 139.578px 50px;
+    caret-color: rgb(80, 80, 80);
+    background: rgba(0, 0, 0, 0) url("https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/herz.png") no-repeat scroll 0% 0% / contain padding-box border-box;
+    border: 0px none rgb(80, 80, 80);
+    font: normal normal 700 normal 14px / normal Handlee, cursive;
+    list-style: none outside none;
+    margin: 0px 0px 0px -40px;
+    outline: rgb(80, 80, 80) none 0px;
+    transition: all 2s ease 0s;
+}/*#serviceboxDIV_16*/

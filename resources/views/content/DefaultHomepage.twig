@@ -242,54 +242,48 @@
 
   </div>
 
-<div class="section-content">
-  <div class="toys-box block-group container">
-    <div class="service-items row mobile-row">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="item-box">
-            <div class="icon-box-inner text-center">
-              <span class="icon-circled">
-                <i class="fa fa-truck"></i>
-              </span>
-              <p class="icon-box-title text-uppercase">
-                <strong>Versand</strong>
-              </p>
-              <p>Schneller Versand nach dem Kauf</p>
-              <div class="baby-image"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="item-box">
-            <div class="icon-box-inner text-center">
-              <span class="icon-circled">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              <p class="icon-box-title text-uppercase">
-                <strong>Service</strong>
-              </p>
-              <p>Ihre Anfragen beantworten wir innerhalb von 24 Stunden</p>
-              <div class="toy-image"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="item-box">
-            <div class="icon-box-inner text-center">
-              <span class="icon-circled">
-                <i class="fa fa-star"></i>
-              </span>
-              <p class="icon-box-title text-uppercase">
-                <strong>Qualität</strong>
-              </p>
-              <p>Top Qualität zum kleinen Preis!</p>
-              <div class="herz-image"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div id="serviceboxDIV_1">
+  	<div id="serviceboxDIV_2">
+  		<div id="serviceboxDIV_3">
+  		</div>
+  		<h2 id="serviceboxH2_4">
+  			Versand
+  		</h2>
+  		<h3 id="serviceboxH3_5">
+          <span class="icon-circled"><i class="fa fa-truck"></i></span>
+
+  			Schneller Versand nach dem Kauf
+  		</h3>
+  		<div id="serviceboxDIV_6">
+  		</div>
+  	</div>
+  	<div id="serviceboxDIV_7">
+  		<div id="serviceboxDIV_8">
+  		</div>
+  		<h2 id="serviceboxH2_9">
+  			Service
+  		</h2>
+  		<h3 id="serviceboxH3_10">
+
+        <span class="icon-circled"><i class="fa fa-comment-o"></i></span>
+  			Ihre Anfragen werden wir innerhalb von 24 STunden beantworten
+  		</h3>
+  		<div id="serviceboxDIV_11">
+  		</div>
+  	</div>
+  	<div id="serviceboxDIV_12">
+  		<div id="serviceboxDIV_13">
+  		</div>
+  		<h2 id="serviceboxH2_14">
+  			Qualität
+  		</h2>
+  		<h3 id="serviceboxH3_15">
+        <span class="icon-circled"><i class="fa fa-star"></i></span>
+  			Top Qualität zum kleinen Preis
+  		</h3>
+  		<div id="serviceboxDIV_16">
+  		</div>
+  	</div>
   </div>
 
   <div class="container">
@@ -317,8 +311,8 @@
     {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
       <div class="m-b-2 clearfix">
         {% if homepageContainer6 | trim is empty %}
-          <div class="section-header m-b-1">
-            <h2>Sale</h2>
+          <div class="product-header">
+            <>Sale<
             <a href="{{ services.category.getURL(category3, lang) }}" class="section-link-all">
               <i class="fa fa-angle-double-right" aria-hidden="true"></i>
               {{ trans("Ceres::Template.homepageShowAll") }}</a>
@@ -346,12 +340,13 @@
     {% if categoryList2 is not empty or homepageContainer9 | trim is not empty %}
       <div class="m-b-2 clearfix">
         {% if homepageContainer9 | trim is empty %}
-          <div class="section-header m-b-1">
-            <h2>{{ category6.details[0].name }}</h2>
+          <div class="product-header">
+            {{ category6.details[0].name }}
+            </div>
             <a href="{{ services.category.getURL(category6, lang) }}" class="section-link-all">
               <i class="fa fa-angle-double-right" aria-hidden="true"></i>
               {{ trans("Ceres::Template.homepageShowAll") }}</a>
-          </div>
+
           <!-- crosssell start -->
           <ul class="product-list row grid">
             {% for item in categoryList2 %}
