@@ -3520,19 +3520,18 @@ ul.ul-list span {
 
 
 /*Product header*/
-.product-header {
-    border-bottom: 0px !important;
-        background-color: #ffffff !important;
-    color: #e86087 !important;
-    margin: 0px !important;
-    padding: 0 20px !important;
-    height: 55px;
-    height: 3.4375rem;
-    line-height: 55px;
-    font-family: 'Handlee', cursive;
-font-size: 30px;
+.product-header h2 {
+  width:100%;
+  text-align:center;
+  border-bottom: 3px dotted #e86087;
+  line-height:0.1em; margin:10px 0 20px;
+  border-bottom: 0px !important;
+  background-color: #ffffff !important;
+  color: #e86087 !important;
+  font-family: 'Handlee', cursive;
+  font-size: 30px;
 }
-.product-header::after {
+/* .product-header::after {
   left: 0.5em;
 margin-right: -50%;
 content: "";
@@ -3553,7 +3552,10 @@ border-top: 2px dashed #e86087;
   vertical-align: middle;
   width: 50%;
   border-top: 2px dashed #e86087;
-}
+} */
+.product-header h2 span {
+  background:#fff; padding:0 10px; }
+
 
 /*Service Box*/
 .item-box .icon-box-inner .toy-image {
