@@ -241,44 +241,37 @@
     </div>
 
     <div id="serviceboxDIV_1">
-     	<div id="serviceboxDIV_2">
-     		<div id="serviceboxDIV_3">
-     		</div>
-     		<h2 id="serviceboxH2_4">
-     			Versand
-     		</h2>
-     		<h3 id="serviceboxH3_5">
+      <div id="serviceboxDIV_2">
+        <div id="serviceboxDIV_3"></div>
+        <h2 id="serviceboxH2_4">
+          Versand
+        </h2>
+        <h3 id="serviceboxH3_5">
 
-
-     			Schneller Versand nach dem Kauf
-     		</h3>
-     		<div id="serviceboxDIV_6">
-     		</div>
-     	</div>
-     	<div id="serviceboxDIV_7">
-     		<div id="serviceboxDIV_8">
-     		</div>
-     		<h2 id="serviceboxH2_9">
-     			Service
-     		</h2>
-     		<h3 id="serviceboxH3_10">
-Wir beraten Sie gerne
-     		</h3>
-     		<div id="serviceboxDIV_11">
-     		</div>
-     	</div>
-     	<div id="serviceboxDIV_12">
-     		<div id="serviceboxDIV_13">
-     		</div>
-     		<h2 id="serviceboxH2_14">
-     			Qualität
-     		</h2>
-     		<h3 id="serviceboxH3_15">
-     			Top Qualität zum kleinen Preis
-     		</h3>
-     		<div id="serviceboxDIV_16">
-     		</div>
-     	</div>
+          Schneller Versand nach dem Kauf
+        </h3>
+        <div id="serviceboxDIV_6"></div>
+      </div>
+      <div id="serviceboxDIV_7">
+        <div id="serviceboxDIV_8"></div>
+        <h2 id="serviceboxH2_9">
+          Service
+        </h2>
+        <h3 id="serviceboxH3_10">
+          Wir beraten Sie gerne
+        </h3>
+        <div id="serviceboxDIV_11"></div>
+      </div>
+      <div id="serviceboxDIV_12">
+        <div id="serviceboxDIV_13"></div>
+        <h2 id="serviceboxH2_14">
+          Qualität
+        </h2>
+        <h3 id="serviceboxH3_15">
+          Top Qualität zum kleinen Preis
+        </h3>
+        <div id="serviceboxDIV_16"></div>
+      </div>
 
     </div>
     <div class="container">
@@ -306,57 +299,59 @@ Wir beraten Sie gerne
       {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
         <div class="m-b-2 clearfix">
           {% if homepageContainer6 | trim is empty %}
-            <div class="product-header">Sale<a href="{{ services.category.getURL(category3, lang) }}" class="section-link-all"> <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <div class="product-header">Sale</div>
+            <a href="{{ services.category.getURL(category3, lang) }}" class="section-link-all">
+              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              {{ trans("Ceres::Template.homepageShowAll") }}</a>
+          </div>
+          <ul class="product-list row grid">
+            {% for item in categoryList1 %}
+              <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
+                  'item' : item
+                } %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          {{ homepageContainer6 }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <!-- END CATEGORIES -->
+
+    {% set homepageContainer9 = LayoutContainer.show("Ceres::Homepage.Container9") %}
+    {% if categoryList2 is not empty or homepageContainer9 | trim is not empty %}
+      <div class="m-b-2 clearfix">
+        {% if homepageContainer9 | trim is empty %}
+          <div class="product-header">
+            {{ category6.details[0].name }}
+          </div>
+          <a href="{{ services.category.getURL(category6, lang) }}" class="section-link-all">
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             {{ trans("Ceres::Template.homepageShowAll") }}</a>
-        </div>
-        <ul class="product-list row grid">
-          {% for item in categoryList1 %}
-            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-              {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
-                'item' : item
-              } %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        {{ homepageContainer6 }}
-      {% endif %}
-    </div>
-  {% endif %}
 
-  <!-- END CATEGORIES -->
+          <!-- crosssell start -->
+          <ul class="product-list row grid">
+            {% for item in categoryList2 %}
+              <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
+                  'item' : item
+                } %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          {{ homepageContainer9 }}
+        {% endif %}
+      </div>
+    {% endif %}
 
-  {% set homepageContainer9 = LayoutContainer.show("Ceres::Homepage.Container9") %}
-  {% if categoryList2 is not empty or homepageContainer9 | trim is not empty %}
-    <div class="m-b-2 clearfix">
-      {% if homepageContainer9 | trim is empty %}
-        <div class="product-header">
-          {{ category6.details[0].name }}
-        </div>
-        <a href="{{ services.category.getURL(category6, lang) }}" class="section-link-all">
-          <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-          {{ trans("Ceres::Template.homepageShowAll") }}</a>
+    {{ LayoutContainer.show("Ceres::Homepage.Container10") }}
 
-        <!-- crosssell start -->
-        <ul class="product-list row grid">
-          {% for item in categoryList2 %}
-            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-              {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
-                'item' : item
-              } %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        {{ homepageContainer9 }}
-      {% endif %}
-    </div>
-  {% endif %}
+  </div>
 
-  {{ LayoutContainer.show("Ceres::Homepage.Container10") }}
-
-</div>
-</div>
 {% else %}
 {{ overrideHomepageContainer | raw }}
 {% endif %}

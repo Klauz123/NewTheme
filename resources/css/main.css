@@ -48,6 +48,10 @@ body > #vue-app, body > #vue-error{
     padding: 0 15px
   }
 }
+.prefooter h3 {
+  font-family: 'Handlee', cursive;
+font-size: 30px;
+}
 
 .pay160614 li {
   float: left;
@@ -3758,7 +3762,7 @@ border-top: 2px dashed #e86087;
 }/*#serviceboxDIV_16*/
 @media (max-width:801px)
 {
-  [class*="#serviceboxDIV_"] {
+  #serviceboxDIV_7 #serviceboxDIV_12 #serviceboxDIV_2 {
         width: 100%;
     }
 
