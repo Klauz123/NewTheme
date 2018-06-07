@@ -61,13 +61,100 @@ font-size: 30px;
   background-position: center;
   image-rendering: -webkit-optimize-contrast
 }
-
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.row-cat {
+    margin-bottom: 60px;
+}
+.grid-clol-6 {
+    margin: 0 -10px;
+}
+.grid-clol-6 ul, ol {
+    list-style: none;
+}
 .pay160614 li a {
   display: block;
   height: 40px;
   width: 100%
 }
+.grid-clol-6 .col-item3 {
+    padding: 0 10px 10px;
+    width: 33.333333%;
+    float: left;
+}
+.row-cat li > a {
+    position: relative;
+    display: block;
+    color: #000;
+    overflow: hidden;
+}
+.std i, .std em {
+    font-style: italic;
+}
 
+.img-hover {
+    position: relative;
+    display: block;
+}
+.row-cat li > a {
+    position: relative;
+    display: block;
+    color: #000;
+    overflow: hidden;
+}
+.row-cat li > a img {
+    max-width: 100%;
+        vertical-align: middle;
+}
+.img-hover span {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 0%;
+    width: 0%;
+    background: #000;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    opacity: 1;
+}
+.img-hover:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 0%;
+    width: 0%;
+    background: #73d5c9;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+.row-cat .content-center {
+    position: absolute;
+    left: 0;
+    bottom: 29px;
+    width: 100%;
+    text-align: center;
+}
+.row-title {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: normal;
+    letter-spacing: -2px;
+    color: #fff;
+    font-weight: bold;
+}
 @media(max-width:590px) {
   .pay160614 li a {
     height: 30px
@@ -82,6 +169,12 @@ font-size: 30px;
 
 .pay160614 li.paypal {
   background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/paypal.png')
+}
+
+
+
+.pay160614 li.ratenkauf {
+  background-image: url('https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/Ratenkauf_Logo_mitSubline_RGB_420.png')
 }
 
 .pay160614 li.amazon {
