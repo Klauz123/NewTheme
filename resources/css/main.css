@@ -3420,3 +3420,44 @@ ul.ul-list span {
   -webkit-appearance: none;
   margin: 0
 }
+
+/*Service Box*/
+.item-box .icon-box-inner .toy-image {
+    bottom: 15px;
+    top: auto;
+    position: relative;
+    width: 100%;
+    margin-left: -40px;
+    height: 80px;
+    height: 5rem;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/toy.png);
+    background-size: contain;
+    transition: all 2s;
+}
+.item-box .icon-box-inner .baby-image {
+    bottom: 15px;
+    top: auto;
+    position: relative;
+    width: 100%;
+    margin-left: -40px;
+    height: 80px;
+    height: 5rem;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/baby.png);
+    background-size: contain;
+    transition: all 2s;
+}
+.item-box .icon-box-inner .herz-image {
+    bottom: 15px;
+    top: auto;
+    position: relative;
+    width: 100%;
+    margin-left: -40px;
+    height: 80px;
+    height: 5rem;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/herz.png);
+    background-size: contain;
+    transition: all 2s;
+}
