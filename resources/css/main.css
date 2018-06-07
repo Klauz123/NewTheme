@@ -3423,33 +3423,37 @@ ul.ul-list span {
 
 
 /*Product header*/
-product-header {
-    padding: 20px 0px 10px 0px;
-    padding: 1.25rem 0rem 0.625rem 0rem;
-    border-bottom: 1px solid #e4e3df;
-    text-decoration: none !important;
+.product-header {
+    border-bottom: 0px !important;
+        background-color: #ffffff !important;
+    color: #e86087 !important;
+    margin: 0px !important;
+    padding: 0 20px !important;
+    height: 55px;
+    height: 3.4375rem;
+    line-height: 55px;
 }
-product-header::before {
-    right: 0.5em;
-    margin-left: -50%;
-    content: "";
-    display: inline-block;
-    height: 2px;
-    position: relative;
-    vertical-align: middle;
-    width: 50%;
-    border-top: 2px dashed #e86087;
+.product-header::after {
+  left: 0.5em;
+margin-right: -50%;
+content: "";
+display: inline-block;
+height: 2px;
+position: relative;
+vertical-align: middle;
+width: 50%;
+border-top: 2px dashed #e86087;
 }
-product-header::before {
-    right: 0.5em;
-    margin-left: -50%;
-    content: "";
-    display: inline-block;
-    height: 2px;
-    position: relative;
-    vertical-align: middle;
-    width: 50%;
-    border-top: 2px dashed #e86087;
+.product-header::before {
+  right: 0.5em;
+  margin-left: -50%;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+  border-top: 2px dashed #e86087;
 }
 
 /*Service Box*/
@@ -3548,6 +3552,7 @@ product-header::before {
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     width: auto;
+    min-width: 25%;
     column-rule-color: rgb(80, 80, 80);
     perspective-origin: 139.578px 110px;
     transform-origin: 139.578px 110px;
@@ -3662,6 +3667,8 @@ product-header::before {
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     width: auto;
+    min-width: 25%;
+
     column-rule-color: rgb(80, 80, 80);
     perspective-origin: 139.578px 110px;
     transform-origin: 139.578px 110px;
@@ -3705,6 +3712,7 @@ product-header::before {
     color: rgb(80, 80, 80);
     float: left;
     height: 220px;
+    min-width: 25%;
     text-decoration: none solid rgb(80, 80, 80);
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
@@ -3746,3 +3754,12 @@ product-header::before {
     outline: rgb(80, 80, 80) none 0px;
     transition: all 2s ease 0s;
 }/*#serviceboxDIV_16*/
+@media (max-width:801px)
+{
+  [class*="#serviceboxDIV_"] {
+        width: 100%;
+    }
+
+  }
+
+ }
