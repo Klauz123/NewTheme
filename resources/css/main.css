@@ -3432,6 +3432,8 @@ ul.ul-list span {
     height: 55px;
     height: 3.4375rem;
     line-height: 55px;
+    font-family: 'Handlee', cursive;
+font-size: 30px;
 }
 .product-header::after {
   left: 0.5em;
@@ -3446,7 +3448,7 @@ border-top: 2px dashed #e86087;
 }
 .product-header::before {
   right: 0.5em;
-  margin-left: -50%;
+
   content: "";
   display: inline-block;
   height: 2px;
