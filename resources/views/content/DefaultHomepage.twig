@@ -240,132 +240,122 @@
       </div>
     </div>
 
-  </div>
+    <div id="serviceboxDIV_1">
+     	<div id="serviceboxDIV_2">
+     		<div id="serviceboxDIV_3">
+     		</div>
+     		<h2 id="serviceboxH2_4">
+     			Versand
+     		</h2>
+     		<h3 id="serviceboxH3_5">
 
-  <div id="serviceboxDIV_1">
-  	<div id="serviceboxDIV_2">
-  		<div id="serviceboxDIV_3">
-  		</div>
-  		<h2 id="serviceboxH2_4">
-  			Versand
-  		</h2>
-  		<h3 id="serviceboxH3_5">
-          <span class="icon-circled"><i class="fa fa-truck"></i></span>
 
-  			Schneller Versand nach dem Kauf
-  		</h3>
-  		<div id="serviceboxDIV_6">
-  		</div>
-  	</div>
-  	<div id="serviceboxDIV_7">
-  		<div id="serviceboxDIV_8">
-  		</div>
-  		<h2 id="serviceboxH2_9">
-  			Service
-  		</h2>
-  		<h3 id="serviceboxH3_10">
+     			Schneller Versand nach dem Kauf
+     		</h3>
+     		<div id="serviceboxDIV_6">
+     		</div>
+     	</div>
+     	<div id="serviceboxDIV_7">
+     		<div id="serviceboxDIV_8">
+     		</div>
+     		<h2 id="serviceboxH2_9">
+     			Service
+     		</h2>
+     		<h3 id="serviceboxH3_10">
+Wir beraten Sie gerne
+     		</h3>
+     		<div id="serviceboxDIV_11">
+     		</div>
+     	</div>
+     	<div id="serviceboxDIV_12">
+     		<div id="serviceboxDIV_13">
+     		</div>
+     		<h2 id="serviceboxH2_14">
+     			Qualität
+     		</h2>
+     		<h3 id="serviceboxH3_15">
+     			Top Qualität zum kleinen Preis
+     		</h3>
+     		<div id="serviceboxDIV_16">
+     		</div>
+     	</div>
 
-        <span class="icon-circled"><i class="fa fa-comment-o"></i></span>
-  			Ihre Anfragen werden wir innerhalb von 24 STunden beantworten
-  		</h3>
-  		<div id="serviceboxDIV_11">
-  		</div>
-  	</div>
-  	<div id="serviceboxDIV_12">
-  		<div id="serviceboxDIV_13">
-  		</div>
-  		<h2 id="serviceboxH2_14">
-  			Qualität
-  		</h2>
-  		<h3 id="serviceboxH3_15">
-        <span class="icon-circled"><i class="fa fa-star"></i></span>
-  			Top Qualität zum kleinen Preis
-  		</h3>
-  		<div id="serviceboxDIV_16">
-  		</div>
-  	</div>
-  </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="seotext text-center">
+            <div class="titel">
+              <h2 class="titel">Kinderwagen von M&L Handel</h2>
+            </div>
+            <p>Alles für Ihr Kind - vom Kinderwagen, über Kinderspielzeug, Babyschaukeln und Kinderdreirädern bieten wir Ihnen verschiedene interessante Artikel zum Thema Kind und Kinderwagen.</p>
+            <p>M&L-Handel bietet Ihnen Kinderwagen und Kinderwagen-Zubebör in den verschiedensten Ausführungen</p>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <div class="seotext text-center">
-          <div class="titel">
-            <h2 class="titel">Kinderwagen von M&L Handel</h2>
+            <p>Unser Ziel ist es, Ihnen preiswerte und qualitativ hochwertige Produkte rund um das Thema Kinderwagen und Erstausstattung für Ihr Kind anzubieten. Die Zufriedenheit unserer Kunden ist uns sehr wichtig, denn wir möchten, dass unsere Kunden wieder
+              kommen und nicht unsere Produkte.</p>
           </div>
-          <p>Alles für Ihr Kind - vom Kinderwagen, über Kinderspielzeug, Babyschaukeln und Kinderdreirädern bieten wir Ihnen verschiedene interessante Artikel zum Thema Kind und Kinderwagen.</p>
-          <p>M&L-Handel bietet Ihnen Kinderwagen und Kinderwagen-Zubebör in den verschiedensten Ausführungen</p>
-
-          <p>Unser Ziel ist es, Ihnen preiswerte und qualitativ hochwertige Produkte rund um das Thema Kinderwagen und Erstausstattung für Ihr Kind anzubieten. Die Zufriedenheit unserer Kunden ist uns sehr wichtig, denn wir möchten, dass unsere Kunden wieder
-            kommen und nicht unsere Produkte.</p>
         </div>
       </div>
+      {% set homepageContainer2 = LayoutContainer.show("Ceres::Homepage.Container2") %}
+      {% set homepageContainer3 = LayoutContainer.show("Ceres::Homepage.Container3") %}
+
+      {% set homepageContainer4 = LayoutContainer.show("Ceres::Homepage.Container4") %}
+      {% set homepageContainer5 = LayoutContainer.show("Ceres::Homepage.Container5") %}
+
+      {% set homepageContainer6 = LayoutContainer.show("Ceres::Homepage.Container6") %}
+      {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
+        <div class="m-b-2 clearfix">
+          {% if homepageContainer6 | trim is empty %}
+            <div class="product-header"><>sale< <a href="{{ services.category.getURL(category3, lang) }}" class="section-link-all"> <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            {{ trans("Ceres::Template.homepageShowAll") }}</a>
+        </div>
+        <ul class="product-list row grid">
+          {% for item in categoryList1 %}
+            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+              {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
+                'item' : item
+              } %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        {{ homepageContainer6 }}
+      {% endif %}
     </div>
-    {% set homepageContainer2 = LayoutContainer.show("Ceres::Homepage.Container2") %}
-    {% set homepageContainer3 = LayoutContainer.show("Ceres::Homepage.Container3") %}
+  {% endif %}
 
-    {% set homepageContainer4 = LayoutContainer.show("Ceres::Homepage.Container4") %}
-    {% set homepageContainer5 = LayoutContainer.show("Ceres::Homepage.Container5") %}
+  <!-- END CATEGORIES -->
 
-    {% set homepageContainer6 = LayoutContainer.show("Ceres::Homepage.Container6") %}
-    {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
-      <div class="m-b-2 clearfix">
-        {% if homepageContainer6 | trim is empty %}
-          <div class="product-header">
-            <>Sale<
-            <a href="{{ services.category.getURL(category3, lang) }}" class="section-link-all">
-              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-              {{ trans("Ceres::Template.homepageShowAll") }}</a>
-          </div>
-          <ul class="product-list row grid">
-            {% for item in categoryList1 %}
-              <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
-                  'item' : item
-                } %}
-              </li>
-            {% endfor %}
-          </ul>
-        {% else %}
-          {{ homepageContainer6 }}
-        {% endif %}
-      </div>
-    {% endif %}
+  {% set homepageContainer9 = LayoutContainer.show("Ceres::Homepage.Container9") %}
+  {% if categoryList2 is not empty or homepageContainer9 | trim is not empty %}
+    <div class="m-b-2 clearfix">
+      {% if homepageContainer9 | trim is empty %}
+        <div class="product-header">
+          {{ category6.details[0].name }}
+        </div>
+        <a href="{{ services.category.getURL(category6, lang) }}" class="section-link-all">
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+          {{ trans("Ceres::Template.homepageShowAll") }}</a>
 
+        <!-- crosssell start -->
+        <ul class="product-list row grid">
+          {% for item in categoryList2 %}
+            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+              {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
+                'item' : item
+              } %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        {{ homepageContainer9 }}
+      {% endif %}
+    </div>
+  {% endif %}
 
+  {{ LayoutContainer.show("Ceres::Homepage.Container10") }}
 
-    <!-- END CATEGORIES -->
-
-    {% set homepageContainer9 = LayoutContainer.show("Ceres::Homepage.Container9") %}
-    {% if categoryList2 is not empty or homepageContainer9 | trim is not empty %}
-      <div class="m-b-2 clearfix">
-        {% if homepageContainer9 | trim is empty %}
-          <div class="product-header">
-            {{ category6.details[0].name }}
-            </div>
-            <a href="{{ services.category.getURL(category6, lang) }}" class="section-link-all">
-              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-              {{ trans("Ceres::Template.homepageShowAll") }}</a>
-
-          <!-- crosssell start -->
-          <ul class="product-list row grid">
-            {% for item in categoryList2 %}
-              <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                {% include "Ceres::Category.Item.Partials.CategoryListItem" with {
-                  'item' : item
-                } %}
-              </li>
-            {% endfor %}
-          </ul>
-        {% else %}
-          {{ homepageContainer9 }}
-        {% endif %}
-      </div>
-    {% endif %}
-
-    {{ LayoutContainer.show("Ceres::Homepage.Container10") }}
-
-  </div>
+</div>
 </div>
 {% else %}
 {{ overrideHomepageContainer | raw }}
