@@ -48,7 +48,9 @@ body>#vue-app, body>#vue-error {
     padding: 0 15px
   }
 }
-
+.prefooter {
+  text-align: center;
+}
 /* .prefooter h3 {
   font-family: 'Handlee', cursive;
   font-size: 30px;
@@ -935,8 +937,15 @@ a.bg-primary:focus, a.bg-primary:hover {
 
 .logo img {
   width: auto;
-  height: 150px
+
 }
+.image-list img {
+  width: 100px;
+}
+.image-list li {
+    list-style: none;
+}
+
 
 @media (min-width:543px) {
   .logo {
