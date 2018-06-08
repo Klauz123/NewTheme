@@ -1,11 +1,4 @@
 
-//Suche
-$(document).on('click','.icon-search',function(){
-var content = $(this).closest('.wrapper-main').find('.search-control');
-if( content.length > 0 ){content.addClass('open');return false;}})
-$(document).on('click','.close-search-control',function(){
-  $(this).closest('.wrapper-main').find('.search-control').removeClass('open');
-})
 //  Sticky Menu
 $(window).scroll(function(){
 var sticky = $('.sticky'),
@@ -94,4 +87,5 @@ if ( $('div#'+otherMenu).is(':visible') ) {$(otherIcon).removeClass(hoverClass);
 if( $(clickedIcon).hasClass(hoverClass)){$('div#'+openMenu).stop().slideUp('medium');$(clickedIcon).removeClass(hoverClass);}
 else {$('div#'+openMenu).stop().slideDown('medium');$(clickedIcon).addClass(hoverClass);}
 });
-// Cookie
+
+});
