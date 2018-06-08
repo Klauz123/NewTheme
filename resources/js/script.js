@@ -1,5 +1,4 @@
-// Cookie
-!function(e){"function"==typeof define&&define.amd?define(["jquery"],e):e("object"==typeof exports?require("jquery"):jQuery)}(function(e){function t(e){return a.raw?e:encodeURIComponent(e)}function n(e){return a.raw?e:decodeURIComponent(e)}function o(e){return t(a.json?JSON.stringify(e):String(e))}function i(e){0===e.indexOf('"')&&(e=e.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));try{return e=decodeURIComponent(e.replace(s," ")),a.json?JSON.parse(e):e}catch(t){}}function c(t,n){var o=a.raw?t:i(t);return e.isFunction(n)?n(o):o}var s=/\+/g,a=e.cookie=function(i,s,r){if(void 0!==s&&!e.isFunction(s)){if(r=e.extend({},a.defaults,r),"number"==typeof r.expires){var p=r.expires,d=r.expires=new Date;d.setTime(+d+864e5*p)}return document.cookie=[t(i),"=",o(s),r.expires?"; expires="+r.expires.toUTCString():"",r.path?"; path="+r.path:"",r.domain?"; domain="+r.domain:"",r.secure?"; secure":""].join("")}for(var u=i?void 0:{},f=document.cookie?document.cookie.split("; "):[],m=0,h=f.length;h>m;m++){var l=f[m].split("="),k=n(l.shift()),x=l.join("=");if(i&&i===k){u=c(x,s);break}i||void 0===(x=c(x))||(u[k]=x)}return u};a.defaults={},e.removeCookie=function(t,n){return void 0===e.cookie(t)?!1:(e.cookie(t,"",e.extend({},n,{expires:-1})),!e.cookie(t))}}),function(e,t,n){function o(t,n){this.element=t,this.options=e.extend({},c,n),this._defaults=c,this._name=i,this.init()}var i="bycookies",c={message:"<p>Diese Website verwendet Cookies. Wenn Sie diese Website weiterhin nutzen, stimmen Sie der Verwendung von Cookies zu. </p>",acceptButton:!0,acceptButtonText:"Ich stimme zu",declineButton:!1,moreInfoLink:!0,moreInfoText:"Mehr erfahren",moreInfoUrl:"/privacy-policy",easing:"swing",animationSpeed:500,cookieDefaults:{expires:30,path:"/"}};o.prototype={init:function(){$cookiesAccepted="cookies_accepted"===e.cookie(this._name),$cookiesDeclined="cookies_declined"===e.cookie(this._name),($cookiesDeclined||!$cookiesAccepted)&&($container=e("<div/>").addClass(this._name+"-container"),$container.append(this.options.message),this.options.moreInfoLink&&this.moreInfoLink($container),this.options.acceptButton&&this.acceptButton($container),this.options.declineButton&&this.declineButton($container),e(this.element).append($container),$container.animate({bottom:0},this.options.animationSpeed,this.options.easing))},acceptButton:function(t){var n=e(this).get(0);t.append(e("<a/>").addClass("accept-cookies").text(n.options.acceptButtonText).attr("title",n.options.acceptButtonText)),t.on("click",".accept-cookies",function(o){o.preventDefault(),e.removeCookie(n._name),e.cookie(n._name,"cookies_accepted",n.options.cookieDefaults),t.animate({bottom:-t.innerHeight()},n.options.animationSpeed,n.options.easing)})},declineButton:function(t){var n=e(this).get(0);t.append(e("<a/>").addClass("decline-cookies").text(n.options.declineButtonText).attr("title",n.options.declineButtonText)),t.on("click",".decline-cookies",function(o){o.preventDefault(),e.removeCookie(n._name),e.cookie(n._name,"cookies_declined",n.options.cookieDefaults),t.animate({bottom:-t.innerHeight()},n.options.animationSpeed,n.options.easing)})},moreInfoLink:function(t){var n=e(this).get(0);t.append(e("<a/>").addClass("more-info").text(n.options.moreInfoText).attr("href",n.options.moreInfoUrl))}},e.fn[i]=function(t){return this.each(function(){e.data(this,"plugin_"+i)||e.data(this,"plugin_"+i,new o(this,t))})}}(jQuery,this);
+
 //Suche
 $(document).on('click','.icon-search',function(){
 var content = $(this).closest('.wrapper-main').find('.search-control');
@@ -96,19 +95,3 @@ if( $(clickedIcon).hasClass(hoverClass)){$('div#'+openMenu).stop().slideUp('medi
 else {$('div#'+openMenu).stop().slideDown('medium');$(clickedIcon).addClass(hoverClass);}
 });
 // Cookie
-$('body').bycookies({
-  message: "Diese Website verwendet Cookies. Wenn Sie diese Website weiterhin nutzen, stimmen Sie der Verwendung von Cookies zu. ",
-  acceptButton: true,
-  acceptButtonText: "Ich stimme zu",
-  declineButton: false,
-  moreInfoLink: true,
-  moreInfoText: "Mehr erfahren",
-  moreInfoUrl: "/privacy-policy",
-  easing: "swing",
-  animationSpeed: 500,
-  cookieDefaults: {
-    expires: 30,
-    path: '/'
-  }
-});
-});
