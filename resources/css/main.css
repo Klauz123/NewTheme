@@ -1164,6 +1164,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 .fa-truck:before {
     content: "\f0d1";
     color: #fff;
+     font-size: 1.5em;
 }
 
 
