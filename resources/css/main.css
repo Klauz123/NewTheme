@@ -1161,10 +1161,11 @@ a.bg-primary:focus, a.bg-primary:hover {
   display: block;
   position: relative
 }
-
-.fa-shopping-cart:before {
-  content: "\f290" !important;
+.fa-truck:before {
+    content: "\f0d1";
+    color: #fff;
 }
+
 
 .wrapper-main .navbar {
   background: transparent;
@@ -4013,6 +4014,10 @@ background-image: url(https://www.ml-handel-shop.de/item/images/183/2000x2000/18
 
 .project-4 {
 background-image: url(https://www.ml-handel-shop.de/item/images/352/2000x2000/autositz-isofix-schwarz.jpg);
+}
+.top-menu a {
+    color: #fff;
+    font-size: 12px;
 }
 
 .project-hover {
