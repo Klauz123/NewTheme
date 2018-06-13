@@ -8,6 +8,7 @@ use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
 
+use IO\Helper\ResourceContainer;
 class ThemeServiceProvider extends ServiceProvider
 {
 
@@ -36,6 +37,12 @@ class ThemeServiceProvider extends ServiceProvider
 
         }, 0);
         return false;
+
+				$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container)
+			{
+					// The script is imported in the Footer.twig of Ceres
+					$container->addScriptTemplate('Theme::content.script');
+			}, self::PRIORITY);
 
     }
 }
