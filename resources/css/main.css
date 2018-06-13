@@ -575,29 +575,8 @@ footer .container {
 
 /* Site specific stuff */
 
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../documents/fonts/work-sans-v3-latin-regular.eot');
-  src: local('Work Sans'), local('WorkSans-Regular'), url('../documents/fonts/work-sans-v3-latin-regular.eot?#iefix') format('embedded-opentype'), url('../documents/fonts/work-sans-v3-latin-regular.woff2') format('woff2'), url('../documents/fonts/work-sans-v3-latin-regular.woff') format('woff'), url('../documents/fonts/work-sans-v3-latin-regular.ttf') format('truetype'), url('../documents/fonts/work-sans-v3-latin-regular.svg#WorkSans') format('svg');
-}
 
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../documents/fonts/josefin-sans-v12-latin-regular.eot');
-  src: local('Josefin Sans Regular'), local('JosefinSans-Regular'), url('../documents/fonts/josefin-sans-v12-latin-regular.eot?#iefix') format('embedded-opentype') url('../documents/fonts/josefin-sans-v12-latin-regular.woff2') format('woff2'), url('../documents/fonts/josefin-sans-v12-latin-regular.woff') format('woff'), url('../documents/fonts/josefin-sans-v12-latin-regular.ttf') format('truetype'), url('../documents/fonts/josefin-sans-v12-latin-regular.svg#JosefinSans') format('svg');
-}
 
-@font-face {
-  font-family: 'Pacifico';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../documents/fonts/pacifico-v12-latin-regular.eot');
-  src: local('Pacifico Regular'), local('Pacifico-Regular'), url('../documents/fonts/pacifico-v12-latin-regular.eot?#iefix') format('embedded-opentype'), url('../documents/fonts/pacifico-v12-latin-regular.woff2') format('woff2'), url('../documents/fonts/pacifico-v12-latin-regular.woff') format('woff'), url('../documents/fonts/pacifico-v12-latin-regular.ttf') format('truetype'), url('../documents/fonts/pacifico-v12-latin-regular.svg#Pacifico') format('svg');
-}
 
 body {
   background-color: #f5f5f5;
