@@ -3985,11 +3985,11 @@ float:left;
 }
 
 .project-2 {
-background-image: url(https://www.ml-handel-shop.de/item/images/182/2000x2000/182-01-schwarz-weiss-2-1-700.jpg);
+background-image: url(https://www.ml-handel-shop.de/item/images/301/2000x2000/IMG-6293-bearbeitet-2.jpg);
 }
 
 .project-3 {
-background-image: url(https://www.ml-handel-shop.de/item/images/183/2000x2000/183_4.jpeg);
+background-image: url(https://www.ml-handel-shop.de/item/images/182/2000x2000/182-01-schwarz-weiss-2-1-700.jpg);
 }
 
 .project-4 {
@@ -4003,7 +4003,7 @@ background-image: url(https://www.ml-handel-shop.de/item/images/352/2000x2000/au
 .project-hover {
 width: 100%;
 height: 100%;
-color: #fff;
+color: #333;
 opacity: 0;
 -webkit-transition: all 0.5s ease;
 -moz-transition: all 0.5s ease;
@@ -4025,7 +4025,7 @@ border: 0;
 }
 
 .project-hover a {
-color: rgba(255, 255, 255, 1);
+color: #333;
 padding: 2px 22px;
 line-height: 40px;
 border: 2px solid rgba(255, 255, 255, 1);
