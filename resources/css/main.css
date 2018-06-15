@@ -1743,10 +1743,12 @@ a.bg-primary:focus, a.bg-primary:hover {
 .seotext {
   margin-bottom: 30px;
   margin-top: 30px
+  padding-left: 15px;
+
 }
 
 .seotext p {
-  text-align: justify
+      font-size: large;
 }
 
 .slide-items {
