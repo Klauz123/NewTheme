@@ -3978,8 +3978,8 @@ border-top: 2px dashed #e86087;
 }
 .project {
 
-height: 500px;
-background-image: url(https://www.ml-handel-shop.de/item/images/326/2000x2000/08-Princess.jpg);
+height: 250px;
+background-image: url(https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/Kinderbetten.jpg);
 background-size: cover;
 background-position: center;
 padding: 0 !important;
@@ -3987,15 +3987,15 @@ float:left;
 }
 
 .project-2 {
-background-image: url(https://www.ml-handel-shop.de/item/images/301/2000x2000/IMG-6293-bearbeitet-2.jpg);
+background-image: url(https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/fahrrad.jpg);
 }
 
 .project-3 {
-background-image: url(https://www.ml-handel-shop.de/item/images/182/2000x2000/182-01-schwarz-weiss-2-1-700.jpg);
+background-image: url(https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/Kinderwagen.jpg);
 }
 
 .project-4 {
-background-image: url(https://www.ml-handel-shop.de/item/images/352/2000x2000/autositz-isofix-schwarz.jpg);
+background-image: url(https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/kindersitz.jpg);
 }
 .top-menu a {
     color: #fff;
@@ -4012,7 +4012,7 @@ opacity: 0;
 -o-transition: all 0.5s ease;
 transition: all 0.5s ease;
 background-color: rgba(186, 232, 2, 0.7);
-padding: 40% 30px !important;
+
 }
 
 .project-hover hr {
