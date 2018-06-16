@@ -3980,10 +3980,11 @@ border-top: 2px dashed #e86087;
 
 height: 250px;
 background-image: url(https://cdn03.plentymarkets.com/mmx8yrv4qndt/frontend/LayoutCeres/Kinderbetten.jpg);
-background-size: cover;
+
 background-position: center;
 padding: 0 !important;
 float:left;
+background-repeat: no-repeat;
 }
 
 .project-2 {
