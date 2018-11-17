@@ -17,6 +17,9 @@ div#productDescription_feature_div {
 body {
   background-color: #ffffff;
 }
+.tab-content{
+  max-width: 100% !important;
+}
 
 .page-content {
   background-color: #ffffff;
