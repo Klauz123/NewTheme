@@ -11,7 +11,9 @@
 }
 
 /* Change background colour */
-
+div#productDescription_feature_div {
+    width: auto !important;
+}
 body {
   background-color: #ffffff;
 }
