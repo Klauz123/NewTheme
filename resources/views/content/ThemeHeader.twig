@@ -1,3 +1,8 @@
+{% set scriptId = uid() %}
+<script id="">
+    document.getElementById("vue-app").style.marginTop = document.getElementById("page-header").getBoundingClientRect().height + 'px';
+    document.getElementById("").remove();
+</script>
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 {% import "Ceres::Category.Macros.CategoryTree" as Tree %}
 
@@ -25,13 +30,13 @@
     <div class="container">
       <div class="row top-row">
         <div class="col-lg-8 col-md-8">
-<li class="hidden-xs top-menu"><a href="/information/versandkosten/" title="Versand">Kostenloser Versand innerhalb Deutschlands</a>
+<li class="d-none top-menu"><a href="/information/versandkosten/" title="Versand">Kostenloser Versand innerhalb Deutschlands</a>
 <i aria-hidden="true" class="fa fa-truck"></i></li>
 </div>
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
           <div class="top-menu">
             <ul id="controlsList" class="inline">
-              <li class="hidden-xs">
+              <li class="d-none">
                 <a href="/contact" title="Kontakt">Kontakt</a>
               </li>
               <li class="list-inline-item control-user">
@@ -107,11 +112,11 @@
                                  </basket-preview>
                              {% endif %}
                          </li>
-                <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler hidden-lg-up" type="button">
+                <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler d-lg-up" type="button">
 
                  </button>
 
-                <li id="btnMainMenuToggler" class="hidden-lg-up">
+                <li id="btnMainMenuToggler" class="d-lg-up">
                   <i aria-hidden="true" v-open-mobile-navigation class="fa fa-bars"></i>
                 </li>
               </ul>
