@@ -1033,6 +1033,7 @@ a.bg-primary:focus, a.bg-primary:hover {
   display: block !important;
 }
 
+
 @media (max-width:1099px) {
   .section-nav {
     height: 90px
@@ -1069,7 +1070,6 @@ a.bg-primary:focus, a.bg-primary:hover {
     width: calc(100% - 150px) !important;
     width: -webkit-calc(100% - 150px) !important;
     width: -moz-calc(100% - 150px) !important;
-    float: right
   }
   #mainNavbarCollapsable ul.mainmenu>li>a {
     color: #333;
@@ -1123,7 +1123,8 @@ a.bg-primary:focus, a.bg-primary:hover {
     color: #95a83f !important
   }
   nav.navbar.mainNavigation {
-    padding-top: 1.6rem
+    padding-top: 1.6rem;
+    width: 100% !important;
   }
   nav.navbar.mainNavigation #mainNavbarCollapsable ul.mainmenu>li>ul.collapse>li.level1>a {
     color: #333;
