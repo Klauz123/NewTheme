@@ -1029,6 +1029,9 @@ a.bg-primary:focus, a.bg-primary:hover {
     padding-top: 1.2rem
   }
 }
+.navbar{
+  display: block !important;
+}
 
 @media (max-width:1099px) {
   .section-nav {
