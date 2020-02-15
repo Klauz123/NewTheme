@@ -255,6 +255,11 @@ body>#vue-app, body>#vue-error {
   font-family: 'Glyphicons Halflings';
   margin: 0 8px 0 -6px
 }
+.middlefooter li.home:before {
+  content:"\e021";
+  font-family: 'Glyphicons Halflings';
+  margin: 0 8px 0 -6px
+}
 
 .middlefooter li.mail {
   font-size: 16px
