@@ -905,8 +905,11 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 @media (max-width:1112) {
   div#mainNavbarCollapsable {
-      display: none;
+      display: none !important;
   }
+.navbarcollaps {
+  display: none !important;
+}
   }
 
 
