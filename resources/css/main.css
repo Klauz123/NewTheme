@@ -903,7 +903,7 @@ a.bg-primary:focus, a.bg-primary:hover {
     display: none
   }
 }
-@media (max-width:1112) {
+@media (max-width:1112px) {
   div#mainNavbarCollapsable {
       display: none !important;
   }
