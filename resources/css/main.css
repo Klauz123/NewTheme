@@ -874,21 +874,11 @@ a.bg-primary:focus, a.bg-primary:hover {
   border-left: 1px solid #b2b1a7;
   margin: 0 3px 0 6px
 }
-#mainNavbarCollapsable{
-  background: #008ebd;
-    bottom: 0;
-    color: #fff;
-    font-size: 1.2em;
-    left: 0;
-    opacity: .6;
-    overflow-y: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
+
+
+.row.menurow{
+
+  display: block;
 }
 
 .top-menu>ul>li:last-child::after {
