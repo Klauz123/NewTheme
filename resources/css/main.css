@@ -1311,7 +1311,7 @@ a.bg-primary:focus, a.bg-primary:hover {
   -ms-transform: translateY(-100px);
   -moz-transform: translateY(-100px);
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.4) !important;
-  max-height: 50px;
+  max-height: 100%;
   padding: 0;
   position: fixed !important;
   top: 0 !important;
